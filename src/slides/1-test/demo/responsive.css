@@ -1,4 +1,4 @@
 .square {
-	width: 80vmin;
-	height: 80vmin;
+	width: 300px;
+	aspect-ratio: 1;
 }

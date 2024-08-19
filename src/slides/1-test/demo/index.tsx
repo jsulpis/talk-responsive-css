@@ -1,11 +1,11 @@
-import { CodeEditor } from "../../../components/CodeEditor";
 import html from "./index.html?raw";
 import styles from "./styles.css?raw";
 import responsive from "./responsive.css?raw";
+import { MultiDeviceCodeEditor } from "../../../components/MultiDeviceCodeEditor";
 
 export function Demo() {
 	return (
-		<CodeEditor
+		<MultiDeviceCodeEditor
 			files={{
 				"/responsive.css": responsive,
 				"/styles.css": styles,

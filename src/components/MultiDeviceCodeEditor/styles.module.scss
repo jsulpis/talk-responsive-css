@@ -1,0 +1,68 @@
+.editor {
+	display: grid;
+	grid-template: auto 500px / 1fr 1fr;
+	place-items: center;
+
+	:global(.sp-wrapper) {
+		display: contents;
+	}
+
+	.devices {
+		grid-column: 2 / 2;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	iframe {
+		max-width: none;
+		max-height: none;
+	}
+
+	:global(.sp-wrapper) {
+		--sp-font-size: 1.125rem;
+		--sp-font-lineHeight: 1.5;
+	}
+
+	:global(.sp-editor) {
+		height: 100%;
+		width: 90%;
+		flex-shrink: 0;
+		border-radius: 8px;
+		overflow: hidden;
+
+		::selection {
+			color: black;
+		}
+	}
+
+	.preview {
+		display: grid;
+		place-items: center;
+	}
+
+	:global(.sp-preview) {
+		position: absolute;
+		background: transparent;
+
+		:global(.sp-preview-container) {
+			border-radius: var(--radius);
+			overflow: hidden;
+		}
+
+		iframe {
+			border: none;
+		}
+
+		&::before {
+			content: "";
+			inset: var(--inset);
+			z-index: 2;
+			position: absolute;
+			background: var(--background);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+}

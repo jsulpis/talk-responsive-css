@@ -34,6 +34,8 @@ export function MultiDeviceCodeEditor(props: SandpackProviderProps) {
 						name="device"
 						value={device.name}
 						checked={selectedDevice.name === device.name}
+						width={selectedDevice.width}
+						height={selectedDevice.height}
 						onChange={(e) => setDevice((e.target as HTMLInputElement).value)}
 					/>
 				))}

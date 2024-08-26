@@ -52,6 +52,13 @@ export const devices = [
 		scale: 0.23,
 		inset: "-4% -3% -39%",
 	},
+	{
+		name: "resizable",
+		width: 400,
+		height: 400,
+		scale: 1,
+		inset: "-4% -3% -39%",
+	}
 ] as const satisfies Device[];
 
 export type DeviceName = (typeof devices)[number]["name"];

@@ -25,6 +25,8 @@ export function MultiDeviceCodeEditor(props: SandpackProviderProps) {
 		setSelectedDevice(devices.find((device) => device.name === name)!);
 	}
 
+	const isDeviceResizable = selectedDevice.name === 'resizable'
+
 	return (
 		<div className={styles.editor}>
 			<div className={styles.devices}>
@@ -53,6 +55,9 @@ export function MultiDeviceCodeEditor(props: SandpackProviderProps) {
 							height: selectedDevice.height,
 							aspectRatio: selectedDevice.width / selectedDevice.height,
 							transform: `scale(${selectedDevice.scale})`,
+							overflow: isDeviceResizable ? 'hidden' : '',
+							border: isDeviceResizable ? "1px solid black" : '',
+							resize: 'both',
 							// @ts-expect-error - custom properties are not supported in the type definition
 							"--background": `url('/mockups/${selectedDevice.name}.png')`,
 							"--inset": selectedDevice.inset,

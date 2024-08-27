@@ -1,0 +1,98 @@
+.overlay {
+	position: fixed;
+	z-index: 1;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	overflow: hidden;
+	touch-action: none;
+	border: 8px solid;
+	border-radius: 16px;
+	container-type: inline-size;
+}
+
+.content {
+	position: relative;
+	height: 100%;
+	inset: 0;
+	user-select: none;
+}
+
+.resolution {
+	position: absolute;
+	font-family: var(--r-main-font);
+	font-size: 1.75rem;
+	top: 1em;
+	left: 50%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+
+	@container (max-width: 250px) {
+		top: 2em;
+	}
+}
+
+.close {
+	position: absolute;
+	padding: 0.5em;
+	font-size: 2rem;
+	width: 1em;
+	height: 1em;
+	box-sizing: content-box;
+	cursor: pointer;
+	top: 0;
+	right: 0;
+	background: transparent;
+	border: 0;
+
+	&:before {
+		content: "\2715";
+	}
+}
+
+@keyframes mmfadeIn {
+	from {
+		opacity: 0;
+	}
+}
+
+@keyframes mmfadeOut {
+	to {
+		opacity: 0;
+	}
+}
+
+.modal {
+	display: none;
+
+	&:global(.is-open) {
+		display: block;
+	}
+
+	&[aria-hidden="false"] .overlay {
+		animation: mmfadeIn 0.2s ease-out;
+	}
+
+	&[aria-hidden="true"] .overlay {
+		animation: mmfadeOut 0.2s ease-out;
+	}
+}
+
+.trigger {
+	display: inline-flex;
+	background: transparent;
+	cursor: pointer;
+	border: none;
+	height: 2rem;
+	padding: 0;
+
+	svg {
+		height: 100%;
+		width: auto;
+	}
+}

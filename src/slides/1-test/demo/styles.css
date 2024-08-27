@@ -6,8 +6,12 @@ body {
 
 body {
 	margin: 0;
-	display: grid;
-	place-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	gap: 30px;
 }
 
 .square {

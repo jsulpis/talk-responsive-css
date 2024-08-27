@@ -6,12 +6,17 @@ import {
 	type SandpackProviderProps,
 } from "@codesandbox/sandpack-react";
 import styles from "./styles.module.scss";
-import { useState } from "react";
+import { useId, useState } from "react";
 import { RadioButton } from "./RadioButton";
 import { devices, type Device } from "./devices";
+import {
+	ResponsivePreview,
+	ResponsivePreviewTrigger,
+} from "./ResponsivePreview";
 
 export function MultiDeviceCodeEditor(props: SandpackProviderProps) {
 	const firstFile = Object.keys(props?.files || {})[0];
+	const responsivePreviewId = useId();
 
 	const options: SandpackProps["options"] = {
 		...props.options,
@@ -39,6 +44,8 @@ export function MultiDeviceCodeEditor(props: SandpackProviderProps) {
 						onChange={(e) => setDevice((e.target as HTMLInputElement).value)}
 					/>
 				))}
+				<span role="separator"></span>
+				<ResponsivePreviewTrigger id={responsivePreviewId} />
 			</div>
 
 			<SandpackProvider
@@ -48,6 +55,7 @@ export function MultiDeviceCodeEditor(props: SandpackProviderProps) {
 				options={options}
 			>
 				<SandpackCodeEditor />
+
 				<div className={styles.preview}>
 					<SandpackPreview
 						style={{
@@ -64,6 +72,14 @@ export function MultiDeviceCodeEditor(props: SandpackProviderProps) {
 						showRefreshButton={false}
 					/>
 				</div>
+
+				<ResponsivePreview id={responsivePreviewId}>
+					<SandpackPreview
+						style={{ height: "100%", width: "100%" }}
+						showOpenInCodeSandbox={false}
+						showRefreshButton={false}
+					/>
+				</ResponsivePreview>
 			</SandpackProvider>
 		</div>
 	);

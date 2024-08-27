@@ -11,6 +11,13 @@
 		grid-column: 2 / 2;
 		display: flex;
 		gap: 1rem;
+
+		[role="separator"] {
+			display: inline-block;
+			height: 2.5rem;
+			width: 1px;
+			background: rgba(0, 0, 0, 0.3);
+		}
 	}
 
 	iframe {

@@ -1,25 +1,45 @@
 .radio {
-	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	overflow: visible;
+	max-width: 2.5rem;
 
-	input {
-		position: absolute;
-		opacity: 0;
+	label {
+		cursor: pointer;
+		display: grid;
+		place-items: center;
 
-		&:checked + svg {
-			color: limegreen;
+		input {
+			position: absolute;
+			opacity: 0;
+
+			&:checked + svg {
+				color: limegreen;
+			}
+
+			&:focus-visible + svg {
+				border-color: currentColor;
+			}
 		}
 
-		&:focus-visible + svg {
-			border-color: currentColor;
+		svg {
+			height: 2.5rem;
+			aspect-ratio: 1;
+			border: 4px solid transparent;
+			border-radius: 4px;
+			position: relative;
+			display: inline-block;
 		}
 	}
 
-	svg {
-		height: 2.5rem;
-		aspect-ratio: 1;
-		border: 4px solid transparent;
-		border-radius: 4px;
-		position: relative;
-		display: inline-block;
+	span {
+		font-weight: bold;
+		font-size: 0.4em;
+		white-space: nowrap;
+		margin-left: -100%;
+		margin-right: -100%;
 	}
+
 }
+

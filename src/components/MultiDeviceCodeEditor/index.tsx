@@ -33,6 +33,7 @@ export function MultiDeviceCodeEditor(props: SandpackProviderProps) {
 		...props.options,
 		activeFile: firstFile,
 		showRefreshButton: false,
+		experimental_enableServiceWorker: true
 	};
 
 	const [selectedDevice, setSelectedDevice] = useState<Device>(devices[0]);

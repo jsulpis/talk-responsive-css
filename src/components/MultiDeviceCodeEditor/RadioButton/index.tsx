@@ -1,4 +1,4 @@
-import type { ComponentProps } from "react";
+import {type ComponentProps, useId} from "react";
 import styles from "./styles.module.scss";
 
 export function RadioButton({
@@ -9,13 +9,14 @@ export function RadioButton({
 	width,
 	height
 }: ComponentProps<"input">) {
+	const id = useId();
 	return (
 		<div className={styles.radio}>
 			<label>
 				<input
 					type="radio"
 					value={value}
-					name={name}
+					name={id}
 					onChange={onChange}
 					checked={checked}
 					aria-label={value as string}

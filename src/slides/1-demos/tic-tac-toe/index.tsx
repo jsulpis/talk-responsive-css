@@ -3,7 +3,7 @@ import styles from "./styles.css?raw";
 import responsive from "./responsive.css?raw";
 import { MultiDeviceCodeEditor } from "../../../components/MultiDeviceCodeEditor";
 
-export function Demo() {
+export function TicTacToe() {
 	return (
 		<MultiDeviceCodeEditor
 			files={{

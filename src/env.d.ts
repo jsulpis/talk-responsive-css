@@ -1,2 +1,2 @@
 /// <reference types="astro/client" />
-declare module '*.png?base64';
+declare module '*.jpg?base64';

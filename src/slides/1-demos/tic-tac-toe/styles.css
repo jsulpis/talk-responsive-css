@@ -17,7 +17,6 @@ body {
 	grid-template-rows: repeat(3, 1fr);
 	grid-template-columns: repeat(3, 1fr);
 	box-sizing: border-box;
-	aspect-ratio: 1;
 	padding: 1.5rem;
 	background: white;
 	border-radius: 20px;

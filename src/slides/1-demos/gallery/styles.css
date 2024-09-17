@@ -9,7 +9,7 @@ body {
 	margin: 0;
 	display: grid;
 	place-items: center;
-	background-image: url('{{imageUrl}}');
+	background-image: url('https://picsum.photos/id/11/1920/1080');
 	background-size: cover;
 }
 

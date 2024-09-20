@@ -1,0 +1,20 @@
+html,
+body {
+	height: 100%;
+	background: white;
+	font-family: 'Inter', sans-serif;
+}
+
+body {
+	margin: 0;
+	display: grid;
+	place-items: center;
+	background-image: url('https://images.unsplash.com/photo-1544556390-f955a792e824');
+	background-size: cover;
+}
+
+.container {
+	max-width: 90vw;
+}
+
+

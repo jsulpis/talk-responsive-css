@@ -14,9 +14,16 @@ import {
 	ResponsivePreviewTrigger,
 } from "./ResponsivePreview";
 
+const SHOW_CSS_FILES: "initial" | "final" = "initial";
+
 export function MultiDeviceCodeEditor(props: SandpackProviderProps) {
 	const firstFile = Object.keys(props?.files || {})[0];
 	const responsivePreviewId = useId();
+
+	if (SHOW_CSS_FILES === "final" && props.files?.["/responsive-final.css"]) {
+		props.files["/responsive.css"] = props.files["/responsive-final.css"];
+	}
+	delete props.files?.["/responsive-final.css"];
 
 	const options: SandpackProps["options"] = {
 		...props.options,

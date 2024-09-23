@@ -15,6 +15,10 @@ body {
 	margin: auto;
 }
 
+p {
+	line-height: 20px;
+}
+
 main {
 	border: 1px solid #D6D6D6;
 	border-radius: 12px;
@@ -23,7 +27,7 @@ main {
 
 h1 {
 	color: #7700ED;
-	margin-bottom: 1vh;
+	margin-bottom: min(2vh, 20px);
 
 	& + p {
 		text-align: left;

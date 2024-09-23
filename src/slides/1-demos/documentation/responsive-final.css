@@ -1,0 +1,11 @@
+.container {
+	max-width: 90vw;
+	display: grid;
+
+}
+
+@media (min-width: 70em) {
+	.menu-icon {
+		display: none;
+	}
+}

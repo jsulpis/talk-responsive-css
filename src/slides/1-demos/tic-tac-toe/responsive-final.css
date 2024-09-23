@@ -1,0 +1,5 @@
+.board {
+	width: clamp(320px, 80vmin, 900px);
+	aspect-ratio: 1;
+}
+

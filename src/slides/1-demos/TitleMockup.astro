@@ -1,0 +1,29 @@
+---
+
+---
+
+<section>
+	<h1>Text Card</h1>
+	<div>
+		<img src="/mockups/demos/text-card/phone-portrait.png" />
+		<img src="/mockups/demos/text-card/tablet-portrait.png" />
+		<img src="/mockups/demos/text-card/laptop.png" />
+		<img src="/mockups/demos/text-card/phone-landscape.png" />
+		<img src="/mockups/demos/text-card/tablet-landscape.png" />
+		<img src="/mockups/demos/text-card/desktop.png" />
+	</div>
+</section>
+
+
+<style>
+	div {
+		display: grid;
+		grid-template-columns: 33% 33% 33%;
+		grid-template-rows: repeat(2, 1fr);
+		place-items: center;
+	}
+
+	img {
+		max-height: 24vh;
+	}
+</style>

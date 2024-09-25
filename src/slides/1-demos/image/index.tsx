@@ -1,10 +1,13 @@
 import html from "./index.html?raw";
+import htmlFinal from "./index-final.html?raw";
 import styles from "./styles.css?raw";
 import responsive from "./responsive.css?raw";
-import BackgroundImage from "./public/background-image.jpg?base64";
-import { MultiDeviceCodeEditor } from "../../../components/MultiDeviceCodeEditor"
+import { MultiDeviceCodeEditor } from "../../../components/MultiDeviceCodeEditor";
 
-const imageUrl = `data:image/jpg;base64, ${BackgroundImage}`
+const injectOrigin = (html: string) => {
+	if (typeof window === "undefined") return html;
+	return html.replaceAll("{origin}", window.location.origin);
+};
 
 export function Image() {
 	return (
@@ -12,7 +15,8 @@ export function Image() {
 			files={{
 				"/responsive.css": responsive,
 				"/styles.css": styles,
-				"/index.html": html.replace('{{imageUrl}}', imageUrl),
+				"/index.html": injectOrigin(html),
+				"/index-final.html": injectOrigin(htmlFinal),
 			}}
 		/>
 	);

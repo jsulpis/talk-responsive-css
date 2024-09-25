@@ -1,3 +1,6 @@
 img {
-
+	display: block;
+	width: 100dvw;
+	height: 100dvh;
+	object-fit: cover;
 }

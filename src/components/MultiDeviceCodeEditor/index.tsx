@@ -14,16 +14,20 @@ import {
 	ResponsivePreviewTrigger,
 } from "./ResponsivePreview";
 
-const SHOW_CSS_FILES: "initial" | "final" = "initial";
+const SHOW_FILES_STATE: "initial" | "final" = "final";
 
 export function MultiDeviceCodeEditor(props: SandpackProviderProps) {
 	const firstFile = Object.keys(props?.files || {})[0];
 	const responsivePreviewId = useId();
 
-	if (SHOW_CSS_FILES === "final" && props.files?.["/responsive-final.css"]) {
+	if (SHOW_FILES_STATE === "final" && props.files?.["/responsive-final.css"]) {
 		props.files["/responsive.css"] = props.files["/responsive-final.css"];
 	}
+	if (SHOW_FILES_STATE === "final" && props.files?.["/index-final.html"]) {
+		props.files["/index.html"] = props.files["/index-final.html"];
+	}
 	delete props.files?.["/responsive-final.css"];
+	delete props.files?.["/index-final.html"];
 
 	const options: SandpackProps["options"] = {
 		...props.options,

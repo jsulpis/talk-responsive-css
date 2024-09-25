@@ -1,20 +1,18 @@
-html,
 body {
-	height: 100%;
-	background: white;
-	font-family: 'Inter', sans-serif;
-}
-
-body {
-	margin: 0;
-	display: grid;
-	place-items: center;
-	background-image: url('https://images.unsplash.com/photo-1544556390-f955a792e824');
+	margin-block: min(4vmax, 200px);
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("https://images.unsplash.com/photo-1544556390-f955a792e824?q=80&w=1000&auto=format&fit=crop");
 	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 }
 
-.container {
-	max-width: 90vw;
+.gallery {
+	margin: auto;
 }
 
-
+img {
+	border-radius: clamp(4px, 1vmin, 8px);
+	box-shadow: 0 0 4px black;
+	object-fit: cover;
+}

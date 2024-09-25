@@ -1,0 +1,19 @@
+.gallery {
+	width: min(90dvw, 1600px);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 8px;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(250px, 25dvw), 1fr));
+}
+
+img {
+	min-width: min(25dvw, 250px);
+	flex-basis: 0%;
+	flex-grow: 1;
+	aspect-ratio: 4 / 5;
+
+	width: 100%;
+}

@@ -1,5 +1,9 @@
+.gallery {
+	width: min(90dvw, 1600px);
+	text-align: center;
+}
+
 img {
-	width: 200px;
-	height: 300px;
-	object-fit: cover;
+	width: 250px;
+	aspect-ratio: 4 / 5;
 }

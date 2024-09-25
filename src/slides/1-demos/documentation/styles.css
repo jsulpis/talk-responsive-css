@@ -50,3 +50,20 @@ header {
 	margin-left: auto;
 	width: 150px;
 }
+
+ul {
+	list-style: none;
+	padding-left: 0;
+	margin-top: 2em;
+}
+
+li {
+	& + li {
+		margin-top: 1em;
+	}
+}
+
+.selected {
+	font-weight: bold;
+	color: #7700ED;
+}

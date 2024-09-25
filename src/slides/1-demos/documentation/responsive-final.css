@@ -1,11 +1,43 @@
 .container {
-	max-width: 90vw;
+	max-width: min(90vw, 1800px);
 	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto;
+}
 
+nav {
+	display: none;
+}
+
+.table-of-contents {
+	display: none;
+	margin-left: 2em;
+	padding-right: 2em;
+}
+
+header {
+	grid-column: 1 / -1
 }
 
 @media (min-width: 70em) {
 	.menu-icon {
 		display: none;
+	}
+
+	nav {
+		display: block;
+	}
+
+	.container {
+		grid-template-columns: 1fr 5fr;
+	}
+}
+
+@media (min-width: 90em) {
+	.table-of-contents {
+		display: block;
+	}
+	.container {
+		grid-template-columns: 1fr 5fr 1fr;
 	}
 }

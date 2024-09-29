@@ -15,6 +15,10 @@ body {
 	margin: auto;
 }
 
+p {
+	line-height: 20px;
+}
+
 main {
 	border: 1px solid #D6D6D6;
 	border-radius: 12px;
@@ -23,7 +27,7 @@ main {
 
 h1 {
 	color: #7700ED;
-	margin-bottom: 1vh;
+	margin-bottom: min(2vh, 20px);
 
 	& + p {
 		text-align: left;
@@ -45,4 +49,21 @@ header {
 	justify-content: space-between;
 	margin-left: auto;
 	width: 150px;
+}
+
+ul {
+	list-style: none;
+	padding-left: 0;
+	margin-top: 2em;
+}
+
+li {
+	& + li {
+		margin-top: 1em;
+	}
+}
+
+.selected {
+	font-weight: bold;
+	color: #7700ED;
 }

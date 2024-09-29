@@ -19,12 +19,12 @@ body {
 	box-sizing: border-box;
 	padding: 1.5rem;
 	background: white;
-	border-radius: 20px;
-	border: 6px solid #FFB82F;
+	border-radius: max(20px, 3vmin);
+	border: max(6px, 1vmin) solid #FFB82F;
 }
 
 .square {
-	border: 1px solid black;
+	border: max(1.5px, 0.4vmin) solid #868686;
 
 	&:nth-child(-n + 3) {
 		border-top: none;

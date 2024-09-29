@@ -1,20 +1,19 @@
 html,
 body {
 	height: 100%;
-	background: white;
-	font-family: 'Inter', sans-serif;
 }
 
 body {
 	margin: 0;
 	display: grid;
 	place-items: center;
-	background: #191C5F;
+	font-family: "Inter", sans-serif;
+	background: #191c5f;
 }
 
 .paper {
 	box-sizing: border-box;
-	background: whitesmoke;
+	background: white;
 	padding: 2rem;
-	border-radius: 10px;
+	border-radius: 0.5em;
 }

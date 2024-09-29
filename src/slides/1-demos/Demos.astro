@@ -1,15 +1,13 @@
 ---
-import { TextCard } from "./text-card";
 import { TicTacToe } from "./tic-tac-toe";
 import { Image } from "./image";
 import { Gallery } from "./gallery";
 import { Documentation } from "./documentation";
 import { Chevres } from "./chevres";
+import TextCard from "./text-card/TextCard.astro";
 ---
 
-<section>
-	<TextCard client:visible />
-</section>
+<TextCard />
 
 <section>
 	<TicTacToe client:visible />

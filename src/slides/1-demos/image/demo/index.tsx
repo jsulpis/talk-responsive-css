@@ -2,14 +2,14 @@ import html from "./index.html?raw";
 import htmlFinal from "./index-final.html?raw";
 import styles from "./styles.css?raw";
 import responsive from "./responsive.css?raw";
-import { MultiDeviceCodeEditor } from "../../../components/MultiDeviceCodeEditor";
+import { MultiDeviceCodeEditor } from "../../../../components/MultiDeviceCodeEditor";
 
 const injectOrigin = (html: string) => {
 	if (typeof window === "undefined") return html;
 	return html.replaceAll("{origin}", window.location.origin);
 };
 
-export function Image() {
+export function ImageDemo() {
 	return (
 		<MultiDeviceCodeEditor
 			files={{

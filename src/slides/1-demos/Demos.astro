@@ -1,5 +1,5 @@
 ---
-import { TicTacToe } from "./tic-tac-toe";
+import TicTacToe from "./tic-tac-toe/TicTacToe.astro";
 import { Image } from "./image";
 import { Gallery } from "./gallery";
 import { Documentation } from "./documentation";
@@ -9,9 +9,7 @@ import TextCard from "./text-card/TextCard.astro";
 
 <TextCard />
 
-<section>
-	<TicTacToe client:visible />
-</section>
+<TicTacToe />
 
 <section>
 	<Image client:visible />

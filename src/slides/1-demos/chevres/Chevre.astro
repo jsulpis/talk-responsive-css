@@ -1,0 +1,127 @@
+---
+import Slide from "../../../components/Slide.astro";
+import { ChevresDemo } from "./demo";
+import ProjectCard from "./ProjectCard.astro";
+import Timeline from "./Timeline.astro";
+---
+
+<section>
+	<Slide>
+		<ChevresDemo client:visible />
+	</Slide>
+
+	<ProjectCard />
+
+	<Timeline />
+
+	<Slide>
+		<p>✔️ Apparence <strong>différente</strong></p>
+		<p class="fragment">❗Rôle fonctionnel <strong>identique</strong></p>
+	</Slide>
+</section>
+
+<Slide>
+	<table>
+		<thead>
+			<tr>
+				<th></th>
+				<th>Media Queries</th>
+				<th>Container Queries</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="fragment">
+				<th scope="row">Cible</th>
+				<td>viewport</td>
+				<td>n'importe quel élément</td>
+			</tr>
+			<tr class="fragment">
+				<th scope="row">Usage</th>
+				<td>modification globale de la page</td>
+				<td>modification locale d'un composant</td>
+			</tr>
+			<tr class="fragment">
+				<th scope="row">Support navigateur</th>
+				<td>largement supporté</td>
+				<td>
+					<a href="https://caniuse.com/?search=container%20queries">
+						Baseline 2023
+					</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</Slide>
+
+<Slide>
+	<img
+		src="/images/viewport-units/availability.png"
+		alt="viewport units availability"
+	/>
+</Slide>
+
+<Slide>
+	<img
+		src="/images/container-queries-units.webp"
+		alt="container queries units"
+	/>
+</Slide>
+
+<Slide>
+	<p class="ideas">💡 Quelques suggestions sur les containers</p>
+	<ul>
+		<li class="fragment">
+			nommer les containers <br />
+			<small>(<code>container: name / inline-size;</code>)</small>
+		</li>
+		<li class="fragment">
+			on peut combiner container et media queries 🤝<br />
+			<small>pour cibler la taille du composant ET celle du viewport</small>
+		</li>
+		<li class="fragment">
+			utiliser avec parcimonie<br />
+			<small>pour éviter l'effet sapin de Noël lors du redimensionnement</small>
+		</li>
+	</ul>
+</Slide>
+
+<Slide>
+	<h3>Pour toujours plus de hype...</h3>
+	<div class="fragment">
+		<p class="subtitle">Les container queries dans les micro frontends</p>
+		<img src="/images/microfrontends.webp" alt="microfrontend architecture" />
+		<a href="https://www.it-labs.com/micro-frontends/">
+			it-labs.com/micro-frontends
+		</a>
+	</div>
+</Slide>
+
+<style>
+	.ideas {
+		font-weight: bold;
+	}
+
+	h3 {
+		text-transform: initial;
+		margin: 0;
+	}
+
+	.subtitle {
+		margin-top: 0;
+	}
+
+	img {
+		height: 500px;
+		margin: 0;
+	}
+	img + a {
+		display: block;
+		color: rgba(0 0 0 /0.4);
+		text-decoration: underline;
+		font-size: 1rem;
+	}
+
+	small {
+		font-size: 0.7em;
+	}
+</style>

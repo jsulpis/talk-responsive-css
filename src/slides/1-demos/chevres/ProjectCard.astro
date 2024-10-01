@@ -1,0 +1,293 @@
+---
+import Slide from "../../../components/Slide.astro";
+---
+
+<Slide>
+	<div class="page">
+		<span class="credits">
+			<a href="https://lab.ishadeed.com/container-queries/project-card/"
+				>Project card</a
+			> par <a href="https://ishadeed.com/">Ahmad Shadeed</a>
+		</span>
+		<div class="wrapper" style="width: 900px">
+			<article class="project-card">
+				<header class="project-card__header">
+					<time>26 Aug 2022</time>
+					<button>
+						<svg
+							width="100pt"
+							height="100pt"
+							version="1.1"
+							viewBox="0 0 100 100"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<g>
+								<path
+									d="m27.801 50c0 5.6875-4.6133 10.301-10.301 10.301s-10.301-4.6133-10.301-10.301 4.6133-10.301 10.301-10.301 10.301 4.6133 10.301 10.301"
+								></path>
+								<path
+									d="m60.301 50c0 5.6875-4.6133 10.301-10.301 10.301s-10.301-4.6133-10.301-10.301 4.6133-10.301 10.301-10.301 10.301 4.6133 10.301 10.301"
+								></path>
+								<path
+									d="m92.801 50c0 5.6875-4.6133 10.301-10.301 10.301s-10.301-4.6133-10.301-10.301 4.6133-10.301 10.301-10.301 10.301 4.6133 10.301 10.301"
+								></path>
+							</g>
+						</svg>
+					</button>
+				</header>
+				<div class="project-card__body">
+					<h3>Container queries</h3>
+					<p>A place to share all my demos on CQs</p>
+					<div class="progress-wrapper">
+						<p>Progress</p>
+						<div class="progress">
+							<div class="progress__current"></div>
+						</div>
+						<p class="">60%</p>
+					</div>
+				</div>
+				<footer class="project-card__footer">
+					<div class="users-list">
+						<div class="user"></div>
+						<div class="user"></div>
+						<div class="user"></div>
+					</div>
+					<p class="remaining">2 days left</p>
+				</footer>
+			</article>
+		</div>
+	</div>
+</Slide>
+
+<style>
+	.page {
+		display: flex;
+		flex-direction: column;
+	}
+
+	a {
+		color: currentColor;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+
+	.credits {
+		/* position: fixed; */
+		opacity: 0.9;
+		font-size: 1.25rem;
+	}
+	.project-card {
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		background-color: #fff;
+		padding: 1rem;
+		border-radius: 8px;
+		border: 1px solid #eaeaea;
+		box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.06);
+	}
+	.project-card p {
+		margin: revert;
+	}
+	.project-card button {
+		flex: 0 0 32px;
+		width: 32px;
+		height: 32px;
+		appearance: none;
+		border: 0;
+		background: transparent;
+		border-radius: 0;
+		cursor: pointer;
+		opacity: 0.25;
+	}
+	.project-card button svg {
+		width: 100%;
+		height: 100%;
+	}
+	.project-card h3 {
+		font-size: 1.75rem;
+		margin: 0;
+		text-transform: initial;
+		color: #222;
+		white-space: nowrap;
+	}
+
+	.project-card__header {
+		display: flex;
+		align-items: start;
+	}
+	.project-card__header time {
+		font-size: 14px;
+		color: #645c5c;
+	}
+	.project-card__header button {
+		margin-left: auto;
+	}
+
+	.progress-wrapper {
+		container: progress/inline-size;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		max-width: 400px;
+	}
+	.progress-wrapper p {
+		font-size: 14px;
+		margin: 0;
+	}
+
+	.progress {
+		position: relative;
+		flex: 1;
+		display: flex;
+		height: 4px;
+		background-color: rgba(0, 0, 0, 0.1);
+		border-radius: 10px;
+		overflow: hidden;
+	}
+
+	.progress__current {
+		height: 4px;
+		width: 50%;
+		background-color: #528ef8;
+	}
+
+	.project-card__body > * + * {
+		margin-top: 0.25rem;
+	}
+	.project-card__body > p {
+		color: #585858;
+		font-size: 14px;
+		margin-bottom: 0;
+	}
+
+	.remaining {
+		display: inline-flex;
+		margin: 0 !important;
+		font-size: 14px;
+		padding: 6px 12px;
+		border-radius: 100px;
+		background-color: rgba(239, 71, 111, 0.1019607843);
+	}
+
+	.project-card__footer {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.users-list {
+		display: flex;
+	}
+
+	.user {
+		--size: 24px;
+		width: var(--size);
+		height: var(--size);
+		background-color: #c7bbe2;
+		border-radius: 50%;
+		border: 2px solid #fff;
+		opacity: 0.8;
+	}
+	.user:not(:first-child) {
+		margin-left: -4px;
+	}
+	.user:nth-child(2) {
+		background-color: #bbe2c0;
+	}
+	.user:nth-child(3) {
+		background-color: #b7c2ff;
+	}
+
+	@container progress (max-width: 200px) {
+		.progress-wrapper p:first-child {
+			display: none;
+		}
+	}
+	@container card (max-width: 449px) {
+		.progress-wrapper {
+			border-top: 1px solid rgba(0, 0, 0, 0.25);
+			padding-top: 1rem;
+			margin-top: 1.5rem !important;
+		}
+	}
+	@container card (min-width: 450px) {
+		.project-card {
+			display: grid;
+			grid-template-columns: 1fr 120px;
+		}
+
+		.project-card__header {
+			display: contents;
+		}
+		.project-card__header button {
+			justify-self: end;
+		}
+
+		.project-card__body {
+			grid-template-columns: 1fr 2fr;
+			gap: 0 1rem;
+		}
+
+		h3,
+		p {
+			grid-column: 1/2;
+		}
+
+		.project-card__footer {
+			text-align: end;
+		}
+
+		.progress-wrapper {
+			margin-top: 1.5rem !important;
+			max-width: initial;
+			grid-column: 2/3;
+			grid-row: 1;
+		}
+	}
+	@container card (min-width: 750px) {
+		.project-card {
+			grid-template-columns: 1fr 170px;
+		}
+
+		.project-card__body {
+			display: grid;
+		}
+
+		.project-card__footer {
+			align-items: start;
+		}
+		.progress-wrapper {
+			margin-top: 0 !important;
+		}
+	}
+	.wrapper {
+		container: card/inline-size;
+	}
+
+	/*** Non-demo CSS ***/
+	.layout {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+		grid-gap: 1rem;
+	}
+
+	.layout__item {
+		container: download/inline-size;
+	}
+
+	.hide {
+		display: none;
+	}
+
+	.wrapper {
+		max-width: 1000px;
+		margin: 2rem auto 0;
+		overflow: hidden;
+		resize: horizontal;
+		min-width: 300px;
+		padding: 12px;
+	}
+</style>

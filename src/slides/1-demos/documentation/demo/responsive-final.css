@@ -11,15 +11,9 @@ nav {
 
 .table-of-contents {
 	display: none;
-	margin-left: 2em;
-	padding-right: 2em;
 }
 
-header {
-	grid-column: 1 / -1
-}
-
-@media (min-width: 70em) {
+@media (min-width: 70rem) {
 	.menu-icon {
 		display: none;
 	}
@@ -31,11 +25,17 @@ header {
 	.container {
 		grid-template-columns: 1fr 5fr;
 	}
+
+	header {
+		grid-column: 1 / -1;
+	}
 }
 
-@media (min-width: 90em) {
+@media (min-width: 90rem) {
 	.table-of-contents {
 		display: block;
+		margin-left: 2em;
+		padding-right: 2em;
 	}
 	.container {
 		grid-template-columns: 1fr 5fr 1fr;

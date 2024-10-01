@@ -1,0 +1,218 @@
+---
+import Slide from "../../../components/Slide.astro";
+---
+
+<Slide>
+	<div class="page">
+		<span class="credits">
+			<a href="https://lab.ishadeed.com/container-queries/timeline/"
+				>Timeline component</a
+			> par <a href="https://ishadeed.com/">Ahmad Shadeed</a>
+		</span>
+		<div class="wrapper" style="width: 920px;">
+			<ol class="c-timeline">
+				<li class="c-timeline__item">
+					<div class="c-timeline__content">
+						<time>10:03</time>
+						<h3 class="c-timeline__title">Design</h3>
+						<p class="c-timeline__desc">In Progress</p>
+					</div>
+				</li>
+				<li class="c-timeline__item">
+					<div class="c-timeline__content">
+						<time>10:03</time>
+						<h3 class="c-timeline__title">Development</h3>
+						<p class="c-timeline__desc">
+							Plan how to implement the new UI smoothly.
+						</p>
+					</div>
+				</li>
+				<li class="c-timeline__item">
+					<div class="c-timeline__content">
+						<time>10:03</time>
+						<h3 class="c-timeline__title">QA Testing</h3>
+						<p class="c-timeline__desc">Todo</p>
+					</div>
+				</li>
+			</ol>
+		</div>
+	</div>
+</Slide>
+
+<style>
+	.page {
+		display: flex;
+		flex-direction: column;
+	}
+
+	a {
+		color: currentColor;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+
+	.credits {
+		/* position: fixed; */
+		opacity: 0.9;
+		font-size: 1.25rem;
+	}
+
+	.c-timeline__item {
+		position: relative;
+		display: flex;
+		gap: 1.5rem;
+	}
+	.c-timeline__item:last-child .c-timeline__content {
+		padding-bottom: 0;
+	}
+	.c-timeline__item:last-child .c-timeline__content:before {
+		display: none;
+	}
+
+	.c-timeline__content {
+		flex: 1;
+		position: relative;
+		order: 1;
+		padding-left: 1.5rem;
+		padding-bottom: 3rem;
+	}
+	.c-timeline__content:before {
+		content: "";
+		position: absolute;
+		right: 100%;
+		top: 0;
+		height: 100%;
+		width: 2px;
+		background-color: currentColor;
+	}
+	.c-timeline__content:after {
+		content: "";
+		position: absolute;
+		left: -11px;
+		top: 0;
+		width: 20px;
+		height: 20px;
+		background-color: #fff;
+		z-index: 1;
+		border: 2px solid currentColor;
+		border-radius: 50%;
+	}
+
+	.c-timeline__title {
+		text-transform: initial;
+		font-size: 1.75rem;
+		font-weight: bold;
+		margin-bottom: max(0.25rem, 0.5cqw + 4px);
+	}
+
+	.c-timeline__desc {
+		color: rgba(0 0 0 / 0.7);
+		margin-block: 0;
+	}
+
+	time {
+		text-align: end;
+		flex: 0 0 100px;
+		min-width: 0;
+		overflow-wrap: break-word;
+		padding-bottom: 1rem;
+	}
+
+	@container timeline (inline-size > 400px) {
+		.c-timeline__item {
+			padding-left: 100px;
+		}
+
+		.c-timeline__item time {
+			position: absolute;
+			right: 100%;
+			width: 100px;
+			padding-right: 20px;
+		}
+
+		.c-timeline__content:after {
+			left: -9px;
+			width: 16px;
+			height: 16px;
+		}
+	}
+	@container timeline (inline-size > 800px) {
+		.c-timeline {
+			display: flex;
+			justify-content: center;
+		}
+
+		.c-timeline__item {
+			gap: 0;
+			flex: 1;
+			padding-left: 0;
+			flex-direction: column;
+			align-items: center;
+		}
+		.c-timeline__item:not(:last-child):before {
+			content: "";
+			position: relative;
+			left: 50%;
+			top: 25px;
+			height: 2px;
+			width: 100%;
+			background-color: currentColor;
+		}
+		.c-timeline__item:after {
+			content: "";
+			width: 50px;
+			height: 50px;
+			background-color: #fff;
+			z-index: 1;
+			border: 2px solid currentColor;
+			border-radius: 50%;
+		}
+
+		.c-timeline__item time {
+			display: inline-block;
+			position: initial;
+			width: initial;
+			padding-right: 0;
+			padding-bottom: 0;
+			margin-bottom: 0.5rem;
+		}
+
+		.c-timeline__content {
+			padding-left: 0;
+			padding-top: 10px;
+			padding-bottom: 0;
+			text-align: center;
+		}
+		.c-timeline__content:before,
+		.c-timeline__content:after {
+			display: none;
+		}
+	}
+
+	@container main (min-width: 300px) {
+		h2 {
+			font-size: max(1.5rem, 4cqi);
+		}
+	}
+
+	.hide {
+		display: none;
+	}
+
+	.wrapper {
+		font-size: 1.25rem;
+		margin: 2rem auto 0;
+		container: timeline/inline-size;
+		overflow: hidden;
+		resize: horizontal;
+		background-color: white;
+		/* border: 1px solid currentColor; */
+		/* box-shadow: 0 0 20px -10px currentColor; */
+		padding: 1rem;
+		border-radius: 8px;
+	}
+
+	ol {
+		margin: revert;
+	}
+</style>

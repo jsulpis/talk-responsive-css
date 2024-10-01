@@ -2,7 +2,7 @@
 import TicTacToe from "./tic-tac-toe/TicTacToe.astro";
 import Image from "./image/Image.astro";
 import { Gallery } from "./gallery";
-import { Documentation } from "./documentation";
+import Documentation from "./documentation/Documentation.astro";
 import TextCard from "./text-card/TextCard.astro";
 import Chevre from "./chevres/Chevre.astro";
 ---
@@ -17,8 +17,6 @@ import Chevre from "./chevres/Chevre.astro";
 	<Gallery client:visible />
 </section>
 
-<section>
-	<Documentation client:visible />
-</section>
+<Documentation />
 
 <Chevre />

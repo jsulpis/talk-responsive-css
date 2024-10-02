@@ -1,0 +1,156 @@
+---
+import Slide from "../../components/Slide.astro";
+---
+
+<Slide>
+	<img
+		src="/images/legacy-displays/1998.webp"
+		alt="1998 computer display"
+	/>
+</Slide>
+
+<Slide>
+	<img
+		src="/images/legacy-displays/2000.webp"
+		alt="2000 computer display"
+	/>
+</Slide>
+
+<Slide>
+	<img
+		src="/images/legacy-displays/2004.webp"
+		alt="2004 computer display"
+	/>
+</Slide>
+
+<Slide>
+	<img
+		src="/images/legacy-displays/2008.webp"
+		alt="2008 computer display"
+	/>
+</Slide>
+
+<Slide>
+	<img
+		src="/images/iphone-keynote/1.webp"
+		alt="Steve Jobs at the first iphone keynote"
+	/>
+</Slide>
+
+<Slide>
+	<img
+		src="/images/iphone-keynote/2.webp"
+		alt="Steve Jobs at the first iphone keynote"
+	/>
+</Slide>
+
+<Slide>
+	<img
+		src="/images/iphone-keynote/3.webp"
+		alt="Steve Jobs at the first iphone keynote"
+	/>
+</Slide>
+
+<Slide>
+	<img
+		src="/images/iphone-keynote/4.webp"
+		alt="Steve Jobs at the first iphone keynote"
+	/>
+</Slide>
+
+<Slide>
+	<h2>Le design web adaptif</h2>
+	<ul>
+		<li class="fragment">Détection du user-agent lors de la requête serveur</li>
+		<li class="fragment">Une page différente est servie en fonction du user-agent (mobile, desktop...)</li>
+		<li class="fragment">En 3G, nécessité de dégrader les médias servis sur la page</li>
+	</ul>
+</Slide>
+
+<Slide>
+	<h2>Un héritage du design physique</h2>
+	<img
+		src="/images/intro/physical-design.webp"
+	 	alt="a design on different physical supports"
+	/>
+</Slide>
+
+<Slide>
+	<h2>Une approche vite limitée...</h2>
+	<ul>
+		<li class="fragment">Arrivée de smartphones d'autres marques, multiplication des devices... et des tailles d'écrans !</li>
+		<li class="fragment">Annonce de l'iPad en 2010</li>
+		<li class="fragment"><img src="/images/intro/ipad-keynote.webp" alt="Steve Jobs holding an iPad" /></li>
+		<li class="fragment">Déploiement de la 4g à partir de 2012</li>
+	</ul>
+</Slide>
+
+<Slide>
+	<h2>Le design web responsif</h2>
+	<div class="row">
+		<img class="fragment" src="/images/intro/ethan-marcotte-portrait.webp" alt="portrait of Ethan Marcotte" />
+		<img class="fragment" src="/images/intro/responsive-web-design-article.webp" alt="screenshot of the responsive web design article" />
+	</div>
+</Slide>
+
+<Slide>
+	<h2>La philosophie du design responsif</h2>
+	<div class="row">
+		<img src="/images/intro/bruce-lee-portrait.webp" alt="portrait of Bruce Lee" />
+		<ul>
+			<li class="fragment">Renoncer au contrôle des media physiques</li>
+			<li class="fragment">Créer une page unique mais fluide, qui soit acceptable à toutes les tailles</li>
+			<li class="fragment">Accepter l'imperfection</li>
+		</ul>
+	</div>
+</Slide>
+
+<Slide>
+	<img src="/images/intro/the-shed.webp" alt="the shed" />
+</Slide>
+
+<Slide>
+	<img src="/images/intro/layout-methods-timeline.webp" alt="a timeline of web layout methods" />
+	<a target="https://www.youtube.com/watch?v=AMPKmh98XLY">Jen Simmons - Designing Intrinsic Layouts (2018)</a>
+</Slide>
+
+<Slide>
+	<ul>
+		<li class="fragment">multicol</li>
+		<li class="fragment">floats</li>
+		<li class="fragment">media queries</li>
+		<li class="fragment">unités relatives</li>
+		<li class="fragment">flexbox</li>
+		<li class="fragment">grid</li>
+		<li class="fragment">container queries</li>
+	</ul>
+</Slide>
+
+<style>
+	img {
+		max-height: 600px;
+
+		li > & {
+			max-height: 200px;
+		}
+	}
+
+	li:has(img) {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+	}
+
+	.row {
+		display: flex;
+		justify-content: space-between;
+
+		img {
+			max-height: 360px;
+		}
+	}
+
+	a {
+		display: block;
+	}
+</style>

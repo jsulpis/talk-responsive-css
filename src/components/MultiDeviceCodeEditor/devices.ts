@@ -29,14 +29,14 @@ export const devices = [
 		width: 834,
 		height: 1194,
 		scale: 0.35,
-		inset: "-5% -6%",
+		inset: "-4% -6%",
 	},
 	{
 		name: "tablet-landscape",
 		width: 1194,
 		height: 834,
 		scale: 0.35,
-		inset: "-6% -5%",
+		inset: "-6% -4%",
 	},
 	{
 		name: "laptop",

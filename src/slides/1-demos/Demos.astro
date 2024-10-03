@@ -1,10 +1,10 @@
 ---
 import TicTacToe from "./tic-tac-toe/TicTacToe.astro";
 import Image from "./image/Image.astro";
-import { Gallery } from "./gallery";
 import Documentation from "./documentation/Documentation.astro";
 import TextCard from "./text-card/TextCard.astro";
 import Chevre from "./chevres/Chevre.astro";
+import Gallery from "./gallery/Gallery.astro";
 ---
 
 <TextCard />
@@ -13,9 +13,7 @@ import Chevre from "./chevres/Chevre.astro";
 
 <Image />
 
-<section>
-	<Gallery client:visible />
-</section>
+<Gallery />
 
 <Documentation />
 

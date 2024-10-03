@@ -1,0 +1,49 @@
+---
+import {GalleryDemo} from "./demo/index";
+import Slide from "../../../components/Slide.astro";
+---
+
+<Slide>
+	<GalleryDemo client:visible />
+</Slide>
+
+<Slide>
+	<img
+		src="/images/flex-grid/mdn-original.webp"
+		alt="MDN website"
+	/>
+</Slide>
+
+<Slide animate={false}>
+	<img
+		src="/images/flex-grid/mdn-flex-header.webp"
+		alt="MDN website with highlighted header"
+	/>
+</Slide>
+
+<Slide animate={false}>
+	<img
+		src="/images/flex-grid/mdn-flex-group.webp"
+		alt="MDN website with hightlighted navigation group"
+	/>
+</Slide>
+
+<Slide>
+	<img
+		src="/images/flex-grid/mdn-grid.webp"
+		alt="MDN website with highlighted main grid"
+	/>
+</Slide>
+
+<Slide>
+	<img
+		src="/images/flex-grid/centered-grid.webp"
+		alt="mockup of a centered grid"
+	/>
+</Slide>
+
+<style>
+	img {
+		height: 600px;
+	}
+</style>

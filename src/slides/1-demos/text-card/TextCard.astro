@@ -1,8 +1,11 @@
 ---
 import Slide from "../../../components/Slide.astro";
+import DemoTitle from "../DemoTitle.astro";
 import Counter from "./Counter.astro";
 import { TextCardDemo, TextCardDemoFinal } from "./demo/index";
 ---
+
+<DemoTitle level={4} />
 
 <Slide>
 	<TextCardDemo client:visible />

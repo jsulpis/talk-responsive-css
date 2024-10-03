@@ -6,11 +6,10 @@ import TextCard from "./text-card/TextCard.astro";
 import Chevre from "./chevres/Chevre.astro";
 import Gallery from "./gallery/Gallery.astro";
 import DemoTitle from "./DemoTitle.astro";
-import TitleMockup from "./TitleMockup.astro";
+import Empty from "./empty/Empty.astro";
 ---
 
-<DemoTitle title="Text card" />
-<TitleMockup />
+<Empty />
 
 <TextCard />
 
@@ -23,3 +22,5 @@ import TitleMockup from "./TitleMockup.astro";
 <Documentation />
 
 <Chevre />
+
+<DemoTitle level={10} />

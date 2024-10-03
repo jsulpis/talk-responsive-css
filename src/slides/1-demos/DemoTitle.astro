@@ -1,32 +1,52 @@
 ---
+import Slide from "../../components/Slide.astro";
 import TTMCCard from "./TTMCCard.astro";
+
 interface Props {
-	title: string;
+	level: number;
 }
 
-const { title } = Astro.props;
+const { level } = Astro.props;
+
+const levels = [
+	"La page vide",
+	'La lettre "A"',
+	'Le mot "rue"',
+	"Le paragraphe",
+	"Le jeu de morpion",
+	"L'image de fond",
+	"La galerie de photos",
+	"La documentation",
+	"La plateforme de contenu",
+	"???",
+];
 ---
 
-<section>
+<Slide>
 	<div class="container">
-		<h1>{title}</h1>
-		<img src="/mockups/demos/text-card/phone-landscape.png" />
-		<div class="card-wrapper">
-			<TTMCCard />
-		</div>
+		<TTMCCard levels={levels} activeLevel={level} />
 	</div>
-</section>
+</Slide>
+
+<Slide>
+	<h1>{level}. {level === 10 ? "Le monde réel" : levels[level - 1]}</h1>
+	<img
+		src={`/mockups/levels/level${level}.webp`}
+		alt={`Design du niveau ${level}`}
+	/>
+</Slide>
 
 <style>
+	h1 {
+		font-size: 3rem;
+	}
+
 	.container {
 		display: grid;
-		grid-template-columns: 70% 30%;
-		grid-template-rows: 50% 50%;
 		place-items: center;
 	}
 
-	.card-wrapper {
-		grid-column: 2;
-		grid-row: 1 / 3;
+	img {
+		height: 450px;
 	}
 </style>

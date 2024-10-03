@@ -1,7 +1,10 @@
 ---
 import Slide from "../../../components/Slide.astro";
+import DemoTitle from "../DemoTitle.astro";
 import { TicTacToeDemo } from "./demo/index";
 ---
+
+<DemoTitle level={5} />
 
 <Slide>
 	<TicTacToeDemo client:visible />

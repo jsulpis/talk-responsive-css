@@ -1,33 +1,54 @@
 ---
+export interface Props {
+	activeLevel?: number;
+	levels: string[];
+}
 
+const { activeLevel, levels } = Astro.props;
 ---
 
-<div>
+<article>
 	<header>
-			<span>Tu te mets combien en...</span>
-			<h3>RESPONSIVE CSS ?</h3>
+		<span>Tu te mets combien en...</span>
+		<h3>RESPONSIVE CSS ?</h3>
 	</header>
 	<div>
-		<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
-			<path d="m3 2 1.578 17.834L12 22l7.468-2.165L21 2H3Zm13.3 14.722-4.293 1.204H12l-4.297-1.204-.297-3.167h2.108l.15 1.526 2.335.639 2.34-.64.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506l-.954 10.71Z"/>
+		<svg
+			aria-hidden="true"
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			fill="white"
+			viewBox="0 0 24 24"
+		>
+			<path
+				d="m3 2 1.578 17.834L12 22l7.468-2.165L21 2H3Zm13.3 14.722-4.293 1.204H12l-4.297-1.204-.297-3.167h2.108l.15 1.526 2.335.639 2.34-.64.245-3.05h-7.27l-.187-2.006h7.64l.174-2.006H6.924l-.176-2.006h10.506l-.954 10.71Z"
+			></path>
 		</svg>
 		<ol>
-			<li>Text card</li>
-			<li>Morpion</li>
-			<li value="4">Image</li>
-			<li>Gallery</li>
-			<li>Documentation</li>
-			<li value="10">Article card</li>
+			{
+				levels.map((level, i) => (
+					<li>
+						<span class="index">{i + 1}</span>
+						{i + 1 === activeLevel ? (
+							<strong class="description">{level}</strong>
+						) : (
+							<span class="description">{level}</span>
+						)}
+					</li>
+				))
+			}
 		</ol>
 	</div>
-</div>
+</article>
 
 <style>
 	:root {
-		--card-color: rebeccapurple;
+		--card-color: #1168b6;
 	}
 
-	span, h3 {
+	header span,
+	h3 {
 		color: white;
 		line-height: 1.7rem;
 	}
@@ -39,12 +60,13 @@
 		margin-bottom: 1rem;
 	}
 
-	span {
-		font-size: 0.8rem;
+	header span {
+		font-size: 1.125rem;
+		margin-bottom: 0.25em;
 	}
 
 	h3 {
-		font-size: 1.7rem;
+		font-size: 2rem;
 		margin-bottom: 0;
 	}
 
@@ -59,42 +81,48 @@
 		background: var(--card-color);
 	}
 
-
-	div:has(div) {
+	article {
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
 		background: var(--card-color);
 		border-radius: 2rem;
 		padding: 1rem;
-		position: relative;
 	}
 
-	div > div {
+	div {
 		position: relative;
 		background: beige;
-		border-radius: 2rem;
-		padding: 1rem 1rem 1rem 0;
-	}
-
-	@counter-style empty-style {
-		system: extends decimal;
-		suffix: ' ';
+		border-radius: 1rem;
+		padding: 1rem 2rem;
 	}
 
 	ol {
-		display: block;
-		list-style: empty-style;
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
 	}
 
 	li {
-		&::marker{
-			font-size: 3rem;
-			font-weight: bold;
-			color: var(--card-color);
-		};
+		display: grid;
+		grid-template-columns: 5ch 1fr;
+		font-size: 1.4rem;
+		align-items: center;
+		padding-block: 0.25em;
 
-		& + li {
-			border-top: 1px solid black;
+		.index {
+			color: var(--card-color);
+			letter-spacing: -0.15em;
+			text-align: center;
+			font-size: 1.7em;
+			line-height: 0.9em;
+			font-weight: bolder;
 		}
 
-		font-size: 2rem;
+		.description {
+			font-size: 1em;
+		}
+
+		+ li {
+			border-top: 1px solid #888;
+		}
 	}
 </style>

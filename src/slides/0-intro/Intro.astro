@@ -3,10 +3,15 @@ import Slide from "../../components/Slide.astro";
 ---
 
 <Slide>
+	<h2>Il était une fois... ✨</h2>
+</Slide>
+
+<Slide>
 	<img
 		src="/images/legacy-displays/1998.webp"
 		alt="1998 computer display"
 	/>
+	<span>IBM 14V - 1024x768 - 1993</span>
 </Slide>
 
 <Slide>
@@ -14,6 +19,7 @@ import Slide from "../../components/Slide.astro";
 		src="/images/legacy-displays/2000.webp"
 		alt="2000 computer display"
 	/>
+	<span>Dell E551c - 1024x768 - 2001</span>
 </Slide>
 
 <Slide>
@@ -21,6 +27,7 @@ import Slide from "../../components/Slide.astro";
 		src="/images/legacy-displays/2004.webp"
 		alt="2004 computer display"
 	/>
+	<span>Dell E173FPc - 1280x1024 - 2004</span>
 </Slide>
 
 <Slide>
@@ -28,38 +35,45 @@ import Slide from "../../components/Slide.astro";
 		src="/images/legacy-displays/2008.webp"
 		alt="2008 computer display"
 	/>
+	<span>Acer X223Wbd - 1680 x 1050 - 2008</span>
+
 </Slide>
 
 <Slide>
-	<img
-		src="/images/iphone-keynote/1.webp"
-		alt="Steve Jobs at the first iphone keynote"
-	/>
+	<h2>Quand soudain... 😨</h2>
 </Slide>
 
 <Slide>
-	<img
-		src="/images/iphone-keynote/2.webp"
-		alt="Steve Jobs at the first iphone keynote"
-	/>
+	<div class="r-stack">
+		<img
+			src="/images/iphone-keynote/1.webp"
+			alt="Steve Jobs at the first iphone keynote"
+		/>
+		<img
+			class="fragment"
+			src="/images/iphone-keynote/2.webp"
+			alt="Steve Jobs at the first iphone keynote"
+		/>
+		<img
+			class="fragment"
+			src="/images/iphone-keynote/3.webp"
+			alt="Steve Jobs at the first iphone keynote"
+		/>
+		<img
+			class="fragment"
+			src="/images/iphone-keynote/4.webp"
+			alt="Steve Jobs at the first iphone keynote"
+		/>
+		<img
+			class="fragment"
+			src="/images/iphone-keynote/5.webp"
+			alt="Steve Jobs at the first iphone keynote"
+		/>
+	</div>
 </Slide>
 
 <Slide>
-	<img
-		src="/images/iphone-keynote/3.webp"
-		alt="Steve Jobs at the first iphone keynote"
-	/>
-</Slide>
-
-<Slide>
-	<img
-		src="/images/iphone-keynote/4.webp"
-		alt="Steve Jobs at the first iphone keynote"
-	/>
-</Slide>
-
-<Slide>
-	<h2>Le design web adaptif</h2>
+	<h2>Le design web adaptif 💡</h2>
 	<ul>
 		<li class="fragment">Détection du user-agent lors de la requête serveur</li>
 		<li class="fragment">Une page différente est servie en fonction du user-agent (mobile, desktop...)</li>
@@ -76,27 +90,35 @@ import Slide from "../../components/Slide.astro";
 </Slide>
 
 <Slide>
-	<h2>Une approche vite limitée...</h2>
+	<h2>Une conception vite limitée...</h2>
 	<ul>
 		<li class="fragment">Arrivée de smartphones d'autres marques, multiplication des devices... et des tailles d'écrans !</li>
 		<li class="fragment">Annonce de l'iPad en 2010</li>
-		<li class="fragment"><img src="/images/intro/ipad-keynote.webp" alt="Steve Jobs holding an iPad" /></li>
+		<li class="fragment r-stack">
+			<img src="/images/intro/ipad-keynote.webp" alt="Steve Jobs holding an iPad" />
+			<img class="fragment" src="/images/intro/ipad-keynote-google.webp" alt="Steve Jobs holding an iPad" />
+		</li>
 		<li class="fragment">Déploiement de la 4g à partir de 2012</li>
 	</ul>
 </Slide>
 
 <Slide>
-	<h2>Le design web responsif</h2>
+	<h2>Une autre approche 🧠</h2>
 	<div class="row">
-		<img class="fragment" src="/images/intro/ethan-marcotte-portrait.webp" alt="portrait of Ethan Marcotte" />
+		<div class="fragment">
+			<img src="/images/intro/ethan-marcotte-portrait.webp" alt="portrait of Ethan Marcotte" />
+			<span>Ethan Marcotte</span>
+		</div>
 		<img class="fragment" src="/images/intro/responsive-web-design-article.webp" alt="screenshot of the responsive web design article" />
 	</div>
 </Slide>
 
 <Slide>
-	<h2>La philosophie du design responsif</h2>
-	<div class="row">
-		<img src="/images/intro/bruce-lee-portrait.webp" alt="portrait of Bruce Lee" />
+	<h2>La philosophie du design responsif 🌊</h2>
+	<div class="r-stack">
+		<div class="fragment fade-in-then-out">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/cJMwBwFj5nQ?si=VSZSrlROeUxHaVIy&amp;controls=0&cc_lang_pref=fr&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>
 		<ul>
 			<li class="fragment">Renoncer au contrôle des media physiques</li>
 			<li class="fragment">Créer une page unique mais fluide, qui soit acceptable à toutes les tailles</li>
@@ -106,6 +128,7 @@ import Slide from "../../components/Slide.astro";
 </Slide>
 
 <Slide>
+	<h2>Un parallèle avec l'architecture 📐</h2>
 	<img src="/images/intro/the-shed.webp" alt="the shed" />
 </Slide>
 
@@ -115,6 +138,7 @@ import Slide from "../../components/Slide.astro";
 </Slide>
 
 <Slide>
+	<h2>Une multitude de techniques 🤯</h2>
 	<ul>
 		<li class="fragment">multicol</li>
 		<li class="fragment">floats</li>
@@ -132,6 +156,11 @@ import Slide from "../../components/Slide.astro";
 
 		li > & {
 			max-height: 200px;
+		}
+
+		& + span {
+			display: block;
+			font-size: 0.8em;
 		}
 	}
 

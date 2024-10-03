@@ -1,17 +1,17 @@
 ---
-import {GalleryDemo} from "./demo/index";
+import { GalleryDemo } from "./demo/index";
 import Slide from "../../../components/Slide.astro";
+import DemoTitle from "../DemoTitle.astro";
 ---
+
+<DemoTitle level={7} />
 
 <Slide>
 	<GalleryDemo client:visible />
 </Slide>
 
 <Slide>
-	<img
-		src="/images/flex-grid/mdn-original.webp"
-		alt="MDN website"
-	/>
+	<img src="/images/flex-grid/mdn-original.webp" alt="MDN website" />
 </Slide>
 
 <Slide animate={false}>

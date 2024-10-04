@@ -1,15 +1,14 @@
 html,
 body {
 	height: 100%;
-	background: white;
-	font-family: 'Inter', sans-serif;
+	font-family: "Inter", sans-serif;
 }
 
 body {
 	margin: 0;
 	display: grid;
 	place-items: center;
-	background: #191C5F;
+	background: #f9f8f6;
 }
 
 .board {
@@ -20,11 +19,12 @@ body {
 	padding: 1.5rem;
 	background: white;
 	border-radius: max(20px, 3vmin);
-	border: max(6px, 1vmin) solid #FFB82F;
+	border: max(6px, 1vmin) solid #ffb82f;
+	box-shadow: 0 0 40px -10px #ffb82f;
 }
 
 .square {
-	border: max(1.5px, 0.4vmin) solid #868686;
+	border: max(1.5px, 0.3vmin) solid #868686;
 
 	&:nth-child(-n + 3) {
 		border-top: none;

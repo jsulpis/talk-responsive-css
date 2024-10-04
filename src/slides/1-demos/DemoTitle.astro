@@ -3,10 +3,10 @@ import Slide from "../../components/Slide.astro";
 import TTMCCard from "./TTMCCard.astro";
 
 interface Props {
-	level: number;
+	level?: number;
 }
 
-const { level } = Astro.props;
+const { level = 0 } = Astro.props;
 
 const levels = [
 	"La page vide",
@@ -28,13 +28,19 @@ const levels = [
 	</div>
 </Slide>
 
-<Slide>
-	<h1>{level}. {level === 10 ? "Le monde réel" : levels[level - 1]}</h1>
-	<img
-		src={`/mockups/levels/level${level}.webp`}
-		alt={`Design du niveau ${level}`}
-	/>
-</Slide>
+{
+	level > 0 && (
+		<Slide>
+			<h1>
+				{level}. {level === 10 ? "Le monde réel" : levels[level - 1]}
+			</h1>
+			<img
+				src={`/mockups/levels/level${level}.webp`}
+				alt={`Design du niveau ${level}`}
+			/>
+		</Slide>
+	)
+}
 
 <style>
 	h1 {

@@ -14,7 +14,7 @@ import {
 	ResponsivePreviewTrigger,
 } from "./ResponsivePreview";
 
-const SHOW_FILES_STATE: "initial" | "final" = "final";
+const SHOW_FILES_STATE: "initial" | "final" = "initial";
 
 export function MultiDeviceCodeEditor(props: SandpackProviderProps) {
 	const firstFile = Object.keys(props?.files || {})[0];

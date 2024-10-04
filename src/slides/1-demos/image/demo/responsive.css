@@ -1,6 +1,6 @@
 img {
-	display: block;
-	width: 100svw;
-	height: 100svh;
-	object-fit: cover;
+  display: block;
+  width: 100svw;
+  height: 100svh;
+  object-fit: cover;
 }

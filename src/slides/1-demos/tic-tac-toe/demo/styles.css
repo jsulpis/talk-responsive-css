@@ -1,44 +1,44 @@
 html,
 body {
-	height: 100%;
-	font-family: "Inter", sans-serif;
+  height: 100%;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-	margin: 0;
-	display: grid;
-	place-items: center;
-	background: #f9f8f6;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: #f9f8f6;
 }
 
 .board {
-	display: grid;
-	grid-template-rows: repeat(3, 1fr);
-	grid-template-columns: repeat(3, 1fr);
-	box-sizing: border-box;
-	padding: 1.5rem;
-	background: white;
-	border-radius: max(20px, 3vmin);
-	border: max(6px, 1vmin) solid #ffb82f;
-	box-shadow: 0 0 40px -10px #ffb82f;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  box-sizing: border-box;
+  padding: 1.5rem;
+  background: white;
+  border-radius: max(20px, 3vmin);
+  border: max(6px, 1vmin) solid #ffb82f;
+  box-shadow: 0 0 40px -10px #ffb82f;
 }
 
 .square {
-	border: max(1.5px, 0.3vmin) solid #868686;
+  border: max(1.5px, 0.3vmin) solid #868686;
 
-	&:nth-child(-n + 3) {
-		border-top: none;
-	}
+  &:nth-child(-n + 3) {
+    border-top: none;
+  }
 
-	&:nth-child(3n) {
-		border-right: none;
-	}
+  &:nth-child(3n) {
+    border-right: none;
+  }
 
-	&:nth-child(3n - 2) {
-		border-left: none;
-	}
+  &:nth-child(3n - 2) {
+    border-left: none;
+  }
 
-	&:nth-child(n + 7):nth-child(-n + 9) {
-		border-bottom: none;
-	}
+  &:nth-child(n + 7):nth-child(-n + 9) {
+    border-bottom: none;
+  }
 }

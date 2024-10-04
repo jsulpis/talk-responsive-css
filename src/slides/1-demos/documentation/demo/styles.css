@@ -1,69 +1,69 @@
 html,
 body {
-	height: 100%;
-	background: white;
-	font-family: 'Inter', sans-serif;
+  height: 100%;
+  background: white;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-	margin: 0;
-	display: grid;
-	place-items: center;
+  margin: 0;
+  display: grid;
+  place-items: center;
 }
 
 .container {
-	margin: auto;
+  margin: auto;
 }
 
 p {
-	line-height: 20px;
+  line-height: 20px;
 }
 
 main {
-	border: 1px solid #D6D6D6;
-	border-radius: 12px;
-	padding-inline: max(8px, 1vw);
+  border: 1px solid #d6d6d6;
+  border-radius: 12px;
+  padding-inline: max(8px, 1vw);
 }
 
 h1 {
-	color: #7700ED;
-	margin-bottom: min(2vh, 20px);
+  color: #7700ed;
+  margin-bottom: min(2vh, 20px);
 
-	& + p {
-		text-align: left;
-		font-size: 1.5rem;
-		margin-top: 0;
-	}
+  & + p {
+    text-align: left;
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
 }
 
 header {
-	display: flex;
-	align-items: center;
-	gap: 60px;
-	min-height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  min-height: 100px;
 }
 
 .nav-icons {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin-left: auto;
-	width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  width: 150px;
 }
 
 ul {
-	list-style: none;
-	padding-left: 0;
-	margin-top: 2em;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 2em;
 }
 
 li {
-	& + li {
-		margin-top: 1em;
-	}
+  & + li {
+    margin-top: 1em;
+  }
 }
 
 .selected {
-	font-weight: bold;
-	color: #7700ED;
+  font-weight: bold;
+  color: #7700ed;
 }

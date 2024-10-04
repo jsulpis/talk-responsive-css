@@ -5,14 +5,14 @@ import responsiveFinal from "./responsive-final.css?raw";
 import { MultiDeviceCodeEditor } from "../../../../components/MultiDeviceCodeEditor";
 
 export function TicTacToeDemo() {
-	return (
-		<MultiDeviceCodeEditor
-			files={{
-				"/responsive.css": responsive,
-				"/responsive-final.css": responsiveFinal,
-				"/styles.css": styles,
-				"/index.html": html,
-			}}
-		/>
-	);
+  return (
+    <MultiDeviceCodeEditor
+      files={{
+        "/responsive.css": responsive,
+        "/responsive-final.css": responsiveFinal,
+        "/styles.css": styles,
+        "/index.html": html,
+      }}
+    />
+  );
 }

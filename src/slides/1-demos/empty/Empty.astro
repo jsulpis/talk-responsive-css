@@ -7,18 +7,11 @@ import DemoTitle from "../DemoTitle.astro";
 <DemoTitle level={1} />
 
 <Slide>
-	<EmptyPageDemo client:visible />
-</Slide>
-
-<Slide>
-	<div class="r-stack">
-		<span class="fragment fade-out" data-fragment-index="1">🎉</span>
-		<span class="fragment" data-fragment-index="1">👏</span>
-	</div>
+  <EmptyPageDemo client:visible />
 </Slide>
 
 <style>
-	span {
-		font-size: 8rem;
-	}
+  span {
+    font-size: 8rem;
+  }
 </style>

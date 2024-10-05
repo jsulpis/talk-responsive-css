@@ -1,0 +1,198 @@
+---
+import Slide from "../../components/Slide.astro";
+---
+
+<Slide>
+	<h2>Il était une fois... ✨</h2>
+</Slide>
+
+<Slide>
+	<img
+		src="/images/legacy-displays/1998.webp"
+		alt="1998 computer display"
+	/>
+	<span>IBM 14V - 1024x768 - 1993</span>
+</Slide>
+
+<Slide>
+	<img
+		src="/images/legacy-displays/2000.webp"
+		alt="2000 computer display"
+	/>
+	<span>Dell E551c - 1024x768 - 2001</span>
+</Slide>
+
+<Slide>
+	<img
+		src="/images/legacy-displays/2004.webp"
+		alt="2004 computer display"
+	/>
+	<span>Dell E173FPc - 1280x1024 - 2004</span>
+</Slide>
+
+<Slide>
+	<img
+		src="/images/legacy-displays/2008.webp"
+		alt="2008 computer display"
+	/>
+	<span>Acer X223Wbd - 1680 x 1050 - 2008</span>
+
+</Slide>
+
+<Slide>
+	<h2>Quand soudain... 😨</h2>
+</Slide>
+
+<Slide>
+	<div class="r-stack">
+		<img
+			src="/images/iphone-keynote/1.webp"
+			alt="Steve Jobs at the first iphone keynote"
+		/>
+		<img
+			class="fragment"
+			src="/images/iphone-keynote/2.webp"
+			alt="Steve Jobs at the first iphone keynote"
+		/>
+		<img
+			class="fragment"
+			src="/images/iphone-keynote/3.webp"
+			alt="Steve Jobs at the first iphone keynote"
+		/>
+		<img
+			class="fragment"
+			src="/images/iphone-keynote/4.webp"
+			alt="Steve Jobs at the first iphone keynote"
+		/>
+		<img
+			class="fragment"
+			src="/images/iphone-keynote/5.webp"
+			alt="Steve Jobs at the first iphone keynote"
+		/>
+	</div>
+</Slide>
+
+<Slide>
+	<h2>Le design web adaptif 💡</h2>
+	<ul>
+		<li class="fragment">Détection du user-agent lors de la requête serveur</li>
+		<li class="fragment">Une page différente est servie en fonction du user-agent (mobile, desktop...)</li>
+		<li class="fragment">En 3G, nécessité de dégrader les médias servis sur la page</li>
+	</ul>
+</Slide>
+
+<Slide>
+	<h2>Un héritage du design physique</h2>
+	<img
+		src="/images/intro/physical-design.webp"
+	 	alt="a design on different physical supports"
+	/>
+</Slide>
+
+<Slide>
+	<h2>Une conception vite limitée...</h2>
+	<ul>
+		<li class="fragment">Arrivée de smartphones d'autres marques, multiplication des devices... et des tailles d'écrans !</li>
+		<li class="fragment">Annonce de l'iPad en 2010</li>
+		<li class="fragment r-stack">
+			<img src="/images/intro/ipad-keynote.webp" alt="Steve Jobs holding an iPad" />
+			<img class="fragment" src="/images/intro/ipad-keynote-google.webp" alt="Steve Jobs holding an iPad" />
+		</li>
+		<li class="fragment">Déploiement de la 4g à partir de 2012</li>
+	</ul>
+</Slide>
+
+<Slide>
+	<h2>Une autre approche 🧠</h2>
+	<div class="row">
+		<div class="fragment">
+			<img src="/images/intro/ethan-marcotte-portrait.webp" alt="portrait of Ethan Marcotte" />
+			<span>Ethan Marcotte</span>
+		</div>
+		<img class="fragment" src="/images/intro/responsive-web-design-article.webp" alt="screenshot of the responsive web design article" />
+	</div>
+</Slide>
+
+<Slide>
+	<h2>Un parallèle avec l'architecture 📐</h2>
+	<div class="r-stack">
+		<img class="fragment" src="/images/intro/the-shed.webp" alt="the shed" />
+		<img class="fragment" src="/images/intro/the-shed-open.webp" alt="the shed" />
+	</div>
+</Slide>
+
+<Slide>
+	<h2>La philosophie du design responsif 🌊</h2>
+	<div class="row">
+		<img
+			class="fragment"
+			src="/images/intro/physical-design.webp"
+			alt="a design on different physical supports"
+		/>
+		<div class="fragment">
+			<img
+				class="fragment"
+				src="/images/intro/bruce-lee-portrait.webp"
+				alt="a portrait of Bruce Lee"
+			/>
+			<span>"Sois comme l'eau"</span>
+		</div>
+		<span class="fragment">Image d'un verre d'eau</span>
+	</div>
+</Slide>
+
+<Slide>
+	<img src="/images/intro/layout-methods-timeline.webp" alt="a timeline of web layout methods" />
+	<a target="https://www.youtube.com/watch?v=AMPKmh98XLY">Jen Simmons - Designing Intrinsic Layouts (2018)</a>
+</Slide>
+
+<Slide>
+	<h2>Une multitude de techniques 🤯</h2>
+	<ul>
+		<li class="fragment">multicol</li>
+		<li class="fragment">floats</li>
+		<li class="fragment">media queries</li>
+		<li class="fragment">unités relatives</li>
+		<li class="fragment">flexbox</li>
+		<li class="fragment">grid</li>
+		<li class="fragment">container queries</li>
+	</ul>
+</Slide>
+
+<Slide>
+	<h2>🫵 Et vous, vous vous mettez combien ?</h2>
+</Slide>
+
+<style>
+	img {
+		max-height: 600px;
+
+		li > & {
+			max-height: 200px;
+		}
+
+		& + span {
+			display: block;
+			font-size: 0.8em;
+		}
+	}
+
+	li:has(img) {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+	}
+
+	.row {
+		display: flex;
+		justify-content: space-between;
+
+		img {
+			max-height: 360px;
+		}
+	}
+
+	a {
+		display: block;
+	}
+</style>

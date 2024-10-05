@@ -11,12 +11,12 @@ body {
   place-items: center;
 }
 
-.container {
-  margin: auto;
+.page {
+	margin: auto;
 }
 
 p {
-  line-height: 20px;
+	line-height: 1.2;
 }
 
 main {
@@ -66,4 +66,8 @@ li {
 .selected {
   font-weight: bold;
   color: #7700ed;
+}
+
+nav, .table-of-contents {
+	display: none;
 }

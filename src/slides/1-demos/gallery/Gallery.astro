@@ -7,43 +7,52 @@ import DemoTitle from "../DemoTitle.astro";
 <DemoTitle level={8} />
 
 <Slide>
-	<GalleryDemo client:visible />
+  <GalleryDemo client:visible />
 </Slide>
 
 <Slide>
-	<img src="/images/flex-grid/mdn-original.webp" alt="MDN website" />
-</Slide>
-
-<Slide animate={false}>
-	<img
-		src="/images/flex-grid/mdn-flex-header.webp"
-		alt="MDN website with highlighted header"
-	/>
-</Slide>
-
-<Slide animate={false}>
-	<img
-		src="/images/flex-grid/mdn-flex-group.webp"
-		alt="MDN website with hightlighted navigation group"
-	/>
+  <img
+    src="/images/flex-grid/centered-grid.webp"
+    alt="mockup of a centered grid"
+  />
 </Slide>
 
 <Slide>
-	<img
-		src="/images/flex-grid/mdn-grid.webp"
-		alt="MDN website with highlighted main grid"
-	/>
-</Slide>
-
-<Slide>
-	<img
-		src="/images/flex-grid/centered-grid.webp"
-		alt="mockup of a centered grid"
-	/>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Flexbox / Grid</th>
+        <th>Breakpoints</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="fragment">
+        <th scope="row" style="width: 8ch">Design</th>
+        <td>fluide</td>
+        <td>fixe par taille d'écran</td>
+      </tr>
+      <tr class="fragment">
+        <th scope="row">Échelle</th>
+        <td>élément HTML</td>
+        <td>page entière</td>
+      </tr>
+      <tr class="fragment">
+        <th scope="row">Effet</th>
+        <td>changement de taille et/ou position</td>
+        <td>n'importe quelle propriété CSS</td>
+      </tr>
+    </tbody>
+  </table>
 </Slide>
 
 <style>
-	img {
-		height: 600px;
-	}
+  img {
+    height: 600px;
+  }
+
+  table {
+    text-wrap: pretty;
+    max-width: 1100px;
+  }
 </style>

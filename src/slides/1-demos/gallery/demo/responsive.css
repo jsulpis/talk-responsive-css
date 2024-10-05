@@ -1,5 +1,5 @@
 .gallery {
-  width: min(90dvw, 1600px);
+  width: min(90vw, 1600px);
   text-align: center;
 }
 
@@ -7,3 +7,22 @@ img {
   width: 250px;
   aspect-ratio: 4 / 5;
 }
+/*
+
+
+
+
+
+
+
+
+grid-template-columns: repeat(
+  auto-fill,
+  minmax(min(250px, 25vw), 1fr)
+);
+
+min-width: min(25vw, 250px);
+flex-basis: 0%;
+flex-grow: 1;
+
+*/

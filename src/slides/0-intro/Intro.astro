@@ -74,8 +74,9 @@ import Slide from "../../components/Slide.astro";
 
 <Slide>
 	<h2>Le design web adaptif 💡</h2>
-	<div class="row">
-
+	<div class="r-stack">
+    <img src="/images/intro/adaptatif-1.webp" alt="">
+    <img class="fragment" src="/images/intro/adaptatif-2.webp" alt="">
   </div>
 </Slide>
 
@@ -90,8 +91,8 @@ import Slide from "../../components/Slide.astro";
 <Slide>
 	<h2>Une conception vite limitée...</h2>
   <div class="r-stack">
-    <img class="fragment fade-in-then-out" src="/images/intro/smartphones-pile.webp" alt="pile of smartphones" />
-    <img class="fragment fade-in-then-out" src="/images/intro/ipad-keynote.webp" alt="Steve Jobs holding an iPad" />
+    <img src="/images/intro/smartphones-pile.webp" alt="pile of smartphones" />
+    <img class="fragment" src="/images/intro/ipad-keynote.webp" alt="Steve Jobs holding an iPad" />
     <img class="fragment" src="/images/intro/ipad-keynote-google.webp" alt="Steve Jobs holding an iPad" />
   </div>
 </Slide>
@@ -100,24 +101,29 @@ import Slide from "../../components/Slide.astro";
   <h2>Une autre approche ?</h2>
 </Slide>
 
-<section data-background-image="images/intro/responsive-web-design-article.webp"></section>
+<Slide data-background-image="images/intro/responsive-web-design-article.webp" data-background-size="contain"></Slide>
 
-<section data-background-transition="none" data-background-image="images/intro/responsive-web-design-article-2.webp"></section>
+<Slide data-background-transition="none" data-background-image="images/intro/responsive-web-design-article-2.webp" data-background-size="contain"></Slide>
 
 <Slide>
 	<h2>Un parallèle avec l'architecture 📐</h2>
 	<div class="r-stack">
-		<img class="fragment fade-in-then-out" src="/images/intro/the-shed.webp" alt="the shed" />
-		<img class="fragment" src="/images/intro/the-shed-open.webp" alt="the shed" />
+		<img class="fragment fade-out" data-fragment-index="1" src="/images/intro/the-shed.webp" alt="the shed" />
+		<img class="fragment" data-fragment-index="1" src="/images/intro/the-shed-open.webp" alt="the shed" />
 	</div>
 </Slide>
 
 <Slide>
   <h2>La philosophie du design responsif 🌊</h2>
   <div class="r-stack">
-    <img class="fragment fade-in-then-out" src="/images/intro/bruce-lee-fullscreen.webp" alt="bruce lee" />
+    <img
+      class="fragment fade-out"
+      data-fragment-index="1"
+      src="/images/intro/bruce-lee-fullscreen.webp"
+      alt="bruce lee" />
     <img
       class="fragment fade-in-then-out"
+      data-fragment-index="1"
       src="/images/intro/paper-sizes.webp"
       alt="sizes of paper"
     />

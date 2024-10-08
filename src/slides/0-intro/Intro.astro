@@ -74,11 +74,10 @@ import Slide from "../../components/Slide.astro";
 
 <Slide>
 	<h2>Le design web adaptif 💡</h2>
-	<ul>
-		<li class="fragment">Détection du user-agent lors de la requête serveur</li>
-		<li class="fragment">Une page différente est servie en fonction du user-agent (mobile, desktop...)</li>
-		<li class="fragment">En 3G, nécessité de dégrader les médias servis sur la page</li>
-	</ul>
+	<div class="r-stack">
+    <img src="/images/intro/adaptatif-1.webp" alt="">
+    <img class="fragment" src="/images/intro/adaptatif-2.webp" alt="">
+  </div>
 </Slide>
 
 <Slide>
@@ -91,67 +90,59 @@ import Slide from "../../components/Slide.astro";
 
 <Slide>
 	<h2>Une conception vite limitée...</h2>
-	<ul>
-		<li class="fragment">Arrivée de smartphones d'autres marques, multiplication des devices... et des tailles d'écrans !</li>
-		<li class="fragment">Annonce de l'iPad en 2010</li>
-		<li class="fragment r-stack">
-			<img src="/images/intro/ipad-keynote.webp" alt="Steve Jobs holding an iPad" />
-			<img class="fragment" src="/images/intro/ipad-keynote-google.webp" alt="Steve Jobs holding an iPad" />
-		</li>
-		<li class="fragment">Déploiement de la 4g à partir de 2012</li>
-	</ul>
+  <div class="r-stack">
+    <img src="/images/intro/smartphones-pile.webp" alt="pile of smartphones" />
+    <img class="fragment" src="/images/intro/ipad-keynote.webp" alt="Steve Jobs holding an iPad" />
+    <img class="fragment" src="/images/intro/ipad-keynote-google.webp" alt="Steve Jobs holding an iPad" />
+  </div>
 </Slide>
 
 <Slide>
-	<h2>Une autre approche 🧠</h2>
-	<div class="row">
-		<div class="fragment">
-			<img src="/images/intro/ethan-marcotte-portrait.webp" alt="portrait of Ethan Marcotte" />
-			<span>Ethan Marcotte</span>
-		</div>
-		<img class="fragment" src="/images/intro/responsive-web-design-article.webp" alt="screenshot of the responsive web design article" />
-	</div>
+  <h2>Une autre approche ?</h2>
 </Slide>
+
+<Slide data-background-image="images/intro/responsive-web-design-article.webp" data-background-size="contain"></Slide>
+
+<Slide data-background-transition="none" data-background-image="images/intro/responsive-web-design-article-2.webp" data-background-size="contain"></Slide>
 
 <Slide>
 	<h2>Un parallèle avec l'architecture 📐</h2>
 	<div class="r-stack">
-		<img class="fragment" src="/images/intro/the-shed.webp" alt="the shed" />
-		<img class="fragment" src="/images/intro/the-shed-open.webp" alt="the shed" />
+		<img class="fragment fade-out" data-fragment-index="1" src="/images/intro/the-shed.webp" alt="the shed" />
+		<img class="fragment" data-fragment-index="1" src="/images/intro/the-shed-open.webp" alt="the shed" />
 	</div>
 </Slide>
 
 <Slide>
-	<h2>La philosophie du design responsif 🌊</h2>
-	<div class="row">
-		<img
-			class="fragment"
-			src="/images/intro/physical-design.webp"
-			alt="a design on different physical supports"
-		/>
-		<div class="fragment">
-			<img
-				class="fragment"
-				src="/images/intro/bruce-lee-portrait.webp"
-				alt="a portrait of Bruce Lee"
-			/>
-			<span>"Sois comme l'eau"</span>
-		</div>
-		<span class="fragment">Image d'un verre d'eau</span>
-	</div>
+  <h2>La philosophie du design responsif 🌊</h2>
+  <div class="r-stack">
+    <img
+      class="fragment fade-out"
+      data-fragment-index="1"
+      src="/images/intro/bruce-lee-fullscreen.webp"
+      alt="bruce lee" />
+    <img
+      class="fragment fade-in-then-out"
+      data-fragment-index="1"
+      src="/images/intro/paper-sizes.webp"
+      alt="sizes of paper"
+    />
+    <img class="fragment fade-in-then-out" src="/images/intro/water-containers.webp" alt="water containers" />
+  </div>
 </Slide>
 
 <Slide>
-	<h2>Une multitude de techniques 🤯</h2>
-	<ul>
-		<li class="fragment">multicol</li>
-		<li class="fragment">floats</li>
-		<li class="fragment">media queries</li>
-		<li class="fragment">unités relatives</li>
-		<li class="fragment">flexbox</li>
-		<li class="fragment">grid</li>
-		<li class="fragment">container queries</li>
-	</ul>
+  <h2>Une multitude de techniques 🤯</h2>
+  <div class="r-stack">
+    <img class="fragment" src="/images/intro/codeblock-1.webp" alt="" />
+    <img class="fragment" src="/images/intro/codeblock-2.webp" alt="" />
+    <img class="fragment" src="/images/intro/codeblock-3.webp" alt="" />
+    <img class="fragment" src="/images/intro/codeblock-4.webp" alt="" />
+    <img class="fragment" src="/images/intro/codeblock-8.webp" alt="" />
+    <img class="fragment" src="/images/intro/codeblock-5.webp" alt="" />
+    <img class="fragment" src="/images/intro/codeblock-6.webp" alt="" />
+    <img class="fragment" src="/images/intro/codeblock-7.webp" alt="" />
+  </div>
 </Slide>
 
 <Slide>

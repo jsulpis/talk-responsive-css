@@ -19,6 +19,24 @@ const { title } = Astro.props;
 	<body>
 		<slot />
 
+    <div class="hidden" id="meme">
+      <img src="/images/breakpoints-meme.webp" alt="batman slapping robin" />
+    </div>
+
+    <script>
+      const memeImg = document.getElementById("meme")
+      document.addEventListener('keydown', (event) => {
+        console.log('eventListener')
+        if (event.code === "AltLeft") {
+          console.log("good key pressed");
+          memeImg.classList.toggle("hidden");
+        } else {
+          memeImg.classList.add("hidden")
+        }
+      })
+
+    </script>
+
 		<script>
 			import Reveal from "reveal.js";
 
@@ -45,4 +63,22 @@ const { title } = Astro.props;
 	.reveal :is(h1, h2, h3, h4, h5, h6) {
 		text-transform: initial;
 	}
+
+  #meme {
+    position: fixed;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+    inset: 0;
+
+    & > img {
+      position: fixed;
+      width: 80vmin;
+      inset: 0;
+      margin: auto;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
 </style>

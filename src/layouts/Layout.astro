@@ -26,15 +26,12 @@ const { title } = Astro.props;
     <script>
       const memeImg = document.getElementById("meme")
       document.addEventListener('keydown', (event) => {
-        console.log('eventListener')
-        if (event.code === "AltLeft") {
-          console.log("good key pressed");
-          memeImg.classList.toggle("hidden");
+        if (event.code === "AltLeft" && document.activeElement.role !== "textbox") {
+            memeImg.classList.toggle("hidden");
         } else {
           memeImg.classList.add("hidden")
         }
       })
-
     </script>
 
 		<script>

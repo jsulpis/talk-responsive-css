@@ -24,18 +24,6 @@ import Timeline from "./Timeline.astro";
 </section>
 
 <Slide>
-  <div class="grid">
-    <img src="/images/container-queries/hero.webp" alt="" />
-    <img class="fragment fade-in-then-out" src="/images/container-queries/hero-code.svg" alt="" data-fragment-index="1" />
-    <img src="/images/container-queries/vertical-card.webp" alt="" />
-    <img class="fragment" src="/images/container-queries/card-code.svg" alt="" data-fragment-index="1" />
-    <img src="/images/container-queries/horizontal-card.webp" alt="" />
-    <img class="fragment fade-in-then-out" src="/images/container-queries/horizontal-card-code.svg" alt="" data-fragment-index="1" />
-  </div>
-  <div class="fragment" data-fragment-index="2" />
-</Slide>
-
-<Slide>
   <a
     href="https://www.karkinos.in/karkinos-design-system-towards-creating-a-care-collaboration-and-person-centered-application-suite/"
   >
@@ -146,19 +134,6 @@ import Timeline from "./Timeline.astro";
 
   small {
     font-size: 0.7em;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, auto);
-    gap: 8px;
-    place-items: center;
-
-    img {
-      height: revert;
-      max-height: 250px;
-    }
   }
 </style>
 

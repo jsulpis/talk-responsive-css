@@ -30,15 +30,32 @@ const levels = [
 
 {
   (level > 3 || level === 1) && (
-    <Slide>
-      <h1>
-        {level}. {level === 10 ? "Le monde réel" : levels[level - 1]}
-      </h1>
-      <img
-        src={`/mockups/levels/level${level}.webp`}
-        alt={`Design du niveau ${level}`}
-      />
-    </Slide>
+    <section>
+      <Slide>
+        <h1>
+          {level}. {level === 10 ? "Le monde réel" : levels[level - 1]}
+        </h1>
+        <img
+          src={`/mockups/levels/level${level}.webp`}
+          alt={`Design du niveau ${level}`}
+        />
+      </Slide>
+      {
+        (level === 9) && (
+          <Slide>
+            <div class="grid">
+              <img src="/images/container-queries/hero.webp" alt="" />
+              <img class="fragment fade-in-then-out" src="/images/container-queries/hero-code.svg" alt="" data-fragment-index="1" />
+              <img src="/images/container-queries/vertical-card.webp" alt="" />
+              <img class="fragment" src="/images/container-queries/card-code.svg" alt="" data-fragment-index="1" />
+              <img src="/images/container-queries/horizontal-card.webp" alt="" />
+              <img class="fragment fade-in-then-out" src="/images/container-queries/horizontal-card-code.svg" alt="" data-fragment-index="1" />
+            </div>
+            <div class="fragment" data-fragment-index="2" />
+          </Slide>
+        )
+      }
+    </section>
   )
 }
 
@@ -54,5 +71,18 @@ const levels = [
 
   img {
     height: 450px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 8px;
+    place-items: center;
+
+    img {
+      height: revert;
+      max-height: 200px;
+    }
   }
 </style>

@@ -2,9 +2,9 @@ import html from "./index.html?raw";
 import styles from "./styles.css?raw";
 import responsive from "./responsive.css?raw";
 import responsiveFinal from "./responsive-final.css?raw";
-import { MultiDeviceCodeEditor } from "../../../../components/MultiDeviceCodeEditor";
+import { MultiDeviceCodeEditor } from "../../../../../components/MultiDeviceCodeEditor";
 
-export function ChevresDemo() {
+export function ChevresComponentDemo() {
   return (
     <MultiDeviceCodeEditor
       files={{

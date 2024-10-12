@@ -1,7 +1,8 @@
 ---
 import Slide from "../../../components/Slide.astro";
 import DemoTitle from "../DemoTitle.astro";
-import { ChevresDemo } from "./demo";
+import { ChevresDemo } from "./demo/layout";
+import { ChevresComponentDemo } from "./demo/component";
 import ProjectCard from "./ProjectCard.astro";
 import Timeline from "./Timeline.astro";
 ---
@@ -10,7 +11,7 @@ import Timeline from "./Timeline.astro";
 
 <section>
   <Slide>
-    <ChevresDemo client:visible />
+    <ChevresComponentDemo client:visible />
   </Slide>
 
   <ProjectCard />
@@ -22,6 +23,10 @@ import Timeline from "./Timeline.astro";
     <p class="fragment">❗Rôle fonctionnel <strong>identique</strong></p>
   </Slide>
 </section>
+
+<Slide>
+  <ChevresDemo client:visible />
+</Slide>
 
 <Slide>
   <a

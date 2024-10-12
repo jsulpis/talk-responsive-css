@@ -1,76 +1,76 @@
 .editor {
-	display: grid;
-	grid-template: auto 500px / 1fr 1fr;
-	place-items: center;
+  display: grid;
+  grid-template: auto 500px / 1fr 1fr;
+  place-items: center;
 
-	:global(.sp-wrapper) {
-		display: contents;
-	}
+  :global(.sp-wrapper) {
+    display: contents;
+  }
 
-	.devices {
-		grid-column: 2 / 2;
-		display: flex;
-		gap: 1rem;
+  .devices {
+    grid-column: 2 / 2;
+    display: flex;
+    gap: 1rem;
 
-		[role="separator"] {
-			display: inline-block;
-			height: 2.5rem;
-			margin-block: 0.25rem;
-			width: 0.0625rem;
-			background: rgba(0, 0, 0, 0.3);
-		}
-	}
+    [role="separator"] {
+      display: inline-block;
+      height: 2.5rem;
+      margin-block: 0.25rem;
+      width: 0.0625rem;
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
 
-	iframe {
-		max-width: none;
-		max-height: none;
-	}
+  iframe {
+    max-width: none;
+    max-height: none;
+  }
 
-	:global(.sp-wrapper) {
-		--sp-font-size: 1.125rem;
-		--sp-font-lineHeight: 1.5;
-	}
+  :global(.sp-wrapper) {
+    --sp-font-size: 1.125rem;
+    --sp-font-lineHeight: 1.5;
+  }
 
-	:global(.sp-editor) {
-		height: 100%;
-		width: 90%;
-		flex-shrink: 0;
-		border-radius: 8px;
-		overflow: hidden;
+  :global(.sp-editor) {
+    height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
 
-		::selection {
-			color: black;
-		}
-	}
+    ::selection {
+      color: black;
+    }
+  }
 
-	.preview {
-		display: grid;
-		place-items: center;
-	}
+  .preview {
+    display: grid;
+    place-items: center;
+  }
 
-	:global(.sp-preview) {
-		position: absolute;
-		background: transparent;
+  :global(.sp-preview) {
+    position: absolute;
+    background: transparent;
 
-		:global(.sp-preview-container) {
-			border-radius: var(--radius);
-			overflow: hidden;
-		}
+    :global(.sp-preview-container) {
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
 
-		iframe {
-			border: none;
-		}
+    iframe {
+      border: none;
+    }
 
-		&::before {
-			pointer-events: none;
-			content: "";
-			inset: var(--inset);
-			z-index: 2;
-			position: absolute;
-			background: var(--background);
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center;
-		}
-	}
+    &::before {
+      pointer-events: none;
+      content: "";
+      inset: var(--inset);
+      z-index: 2;
+      position: absolute;
+      background: var(--background);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 }

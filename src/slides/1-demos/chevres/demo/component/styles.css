@@ -10,14 +10,15 @@ body {
   display: grid;
   place-items: center;
   text-wrap: pretty;
-  background: rgb(230, 230, 230);
+  background: rgb(230, 230, 240);
 }
 
 article {
-  min-width: 200px;
+  min-width: 325px;
   max-width: min(90vw, 1000px);
   resize: horizontal;
   overflow: hidden;
   background: white;
-  border-radius: 0.75rem;
+  border-radius: 1.75rem;
+  padding: 1em;
 }

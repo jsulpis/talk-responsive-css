@@ -2,7 +2,15 @@
 import Slide from "../../components/Slide.astro";
 ---
 
-<Slide>
-	<h2>Tu te mets combien en responsive CSS ?</h2>
-	<p>Edition 2024</p>
-</Slide>
+<Slide
+  data-background-image="/images/intro.webp"
+  data-background-size="contain"
+/>
+
+<style is:global>
+  @media (min-aspect-ratio: 16/9) {
+    .backgrounds > .slide-background:first-child.present {
+      background-image: linear-gradient(transparent 30%, black 0px);
+    }
+  }
+</style>

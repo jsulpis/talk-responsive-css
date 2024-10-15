@@ -83,16 +83,17 @@ const { activeLevel, levels } = Astro.props;
 	}
 
 	article {
-		font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: .01em;
 		background: var(--card-color);
-		border-radius: 2rem;
+		border-radius: 1.75rem;
 		padding: 1rem;
+    box-shadow: 0 0 40px -20px black;
 	}
 
 	div {
 		position: relative;
 		background: beige;
-		border-radius: 1rem;
+		border-radius: .75rem;
 		padding: 1rem 2rem;
 	}
 
@@ -111,15 +112,19 @@ const { activeLevel, levels } = Astro.props;
 
 		.index {
 			color: var(--card-color);
-			letter-spacing: -0.15em;
+			letter-spacing: -0.1em;
 			text-align: center;
 			font-size: 1.7em;
 			line-height: 0.9em;
-			font-weight: bolder;
+			font-weight: 900;
 		}
 
 		.description {
 			font-size: 1em;
+
+      strong& {
+        font-weight: 900;
+      }
 		}
 
 		+ li {

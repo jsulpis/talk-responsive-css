@@ -8,16 +8,19 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700;900&family=Slabo+27px&display=swap" rel="stylesheet">
+    <title>{title}</title>
+  </head>
 
-	<body>
-		<slot />
+  <body>
+    <slot />
 
     <div class="hidden" id="meme">
       <img src="/images/breakpoints-meme.webp" alt="batman slapping robin" />
@@ -26,40 +29,40 @@ const { title } = Astro.props;
     <script>
       const memeImg = document.getElementById("meme")
       document.addEventListener('keydown', (event) => {
-        if (event.code === "AltLeft" && document.activeElement.role !== "textbox") {
-            memeImg.classList.toggle("hidden");
+        if (event.code === "AltLeft" && !(document.activeElement?.role === "textbox" || event.metaKey || event.ctrlKey)) {
+          memeImg.classList.toggle("hidden");
         } else {
           memeImg.classList.add("hidden")
         }
       })
     </script>
 
-		<script>
-			import Reveal from "reveal.js";
+    <script>
+      import Reveal from "reveal.js";
 
-			Reveal.initialize({
-				transition: "none",
-				history: true,
-				progress: false,
-				width: 1280,
-				height: 720,
-				controls: false,
-				autoAnimateDuration: 0.5,
-				autoAnimateEasing: "cubic-bezier(0.4, 0, 0.2, 1)",
-			});
-		</script>
-	</body>
+      Reveal.initialize({
+        transition: "none",
+        history: true,
+        progress: false,
+        width: 1280,
+        height: 720,
+        controls: false,
+        autoAnimateDuration: 0.5,
+        autoAnimateEasing: "cubic-bezier(0.4, 0, 0.2, 1)",
+      });
+    </script>
+  </body>
 </html>
 
 <style is:global lang="scss">
-	main,
-	.slide-background-content {
-		background: hsl(218, 100%, 93%);
-	}
-
-	.reveal :is(h1, h2, h3, h4, h5, h6) {
-		text-transform: initial;
-	}
+  :root {
+    --r-main-font: "Aleo", serif;
+    --r-heading-font: "Aleo", serif;
+    --r-heading1-size: 2em;
+    --r-heading2-size: 1.2em;
+    --r-heading-font-weight: 700;
+    --r-heading-text-transform: normal;
+  }
 
   #meme {
     position: fixed;

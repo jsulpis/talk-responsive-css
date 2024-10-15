@@ -70,7 +70,7 @@ export function Modal({ id, children }: PropsWithChildren<{ id: string }>) {
 					event.target.style.width = `${newModalWidth}px`;
 
 					if (resolutionDisplay.current) {
-						resolutionDisplay.current.innerHTML = `${newDisplayWidth} x ${1440}`;
+						resolutionDisplay.current.innerHTML = `${newDisplayWidth} &times; ${1440}`;
 					}
 				},
 			},
@@ -104,7 +104,7 @@ export function Modal({ id, children }: PropsWithChildren<{ id: string }>) {
 						}}
 					>
 						<span className={styles.resolution} ref={resolutionDisplay}>
-							{`${previewResolution.current.width} x ${previewResolution.current.height}`}
+							{previewResolution.current.width} &times; {previewResolution.current.height}
 						</span>
 						<div ref={preview} className={styles.content}>
 							{children}

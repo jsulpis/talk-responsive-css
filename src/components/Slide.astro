@@ -13,6 +13,10 @@ interface Props extends HTMLAttributes<"section"> {
 const { animate = true, ...attrs } = Astro.props;
 ---
 
-<section data-auto-animate={animate} {...attrs}>
+<section
+  data-background-color="hsl(218, 100%, 96%)"
+  data-auto-animate={animate}
+  {...attrs}
+>
   <slot />
 </section>

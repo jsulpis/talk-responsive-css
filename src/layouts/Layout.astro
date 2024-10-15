@@ -34,14 +34,15 @@ const { title } = Astro.props;
       const memeBatmanImg = document.getElementById("meme-batman")
       const memeRobinImg = document.getElementById("meme-robin")
       document.addEventListener('keydown', (event) => {
-        if (event.code === "AltLeft" && document.activeElement.role !== "textbox") {
+        if (event.code === "AltLeft" && !(document.activeElement?.role === "textbox" || event.metaKey || event.ctrlKey)) {
           memeBatmanImg.classList.toggle("hidden");
           memeRobinImg.classList.add("hidden");
-        } else if (event.code === "AltRight" && document.activeElement.role !== "textbox") {
+        } else if (event.code === "AltRight" && !(document.activeElement?.role === "textbox" || event.metaKey || event.ctrlKey)) {
           memeRobinImg.classList.toggle("hidden");
           memeBatmanImg.classList.add("hidden");
         } else {
           memeBatmanImg.classList.add("hidden");
+          memeRobinImg.classList.add("hidden");
         }
       })
     </script>

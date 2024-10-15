@@ -8,34 +8,50 @@ import Slide from "../../components/Slide.astro";
 
 <Slide>
 	<img
+    class="old-screen"
 		src="/images/legacy-displays/1998.webp"
 		alt="1998 computer display"
 	/>
-	<span>IBM 14V - 1024x768 - 1993</span>
+  <div class="screen-specs">
+    <strong>IBM 14V</strong>
+    <span>1024&times;768, 1993</span>
+  </div>
 </Slide>
 
 <Slide>
 	<img
+    class="old-screen"
 		src="/images/legacy-displays/2000.webp"
 		alt="2000 computer display"
 	/>
-	<span>Dell E551c - 1024x768 - 2001</span>
+  <div class="screen-specs">
+    <strong>Dell E551c</strong>
+    <span>1024&times;768, 2001</span>
+  </div>
 </Slide>
 
 <Slide>
 	<img
+    class="old-screen"
 		src="/images/legacy-displays/2004.webp"
 		alt="2004 computer display"
 	/>
-	<span>Dell E173FPc - 1280x1024 - 2004</span>
+  <div class="screen-specs">
+    <strong>Dell E173FPc</strong>
+    <span>1280&times;1024, 2004</span>
+  </div>
 </Slide>
 
 <Slide>
 	<img
+    class="old-screen"
 		src="/images/legacy-displays/2008.webp"
 		alt="2008 computer display"
 	/>
-	<span>Acer X223Wbd - 1680 x 1050 - 2008</span>
+  <div class="screen-specs">
+    <strong>Acer X223Wbd</strong>
+    <span>1680&times;1050, 2008</span>
+  </div>
 
 </Slide>
 
@@ -82,10 +98,12 @@ import Slide from "../../components/Slide.astro";
 
 <Slide>
 	<h2>Un héritage du design physique</h2>
-	<img
+  <div class="r-stack">
+    <img
 		src="/images/intro/physical-design.webp"
-	 	alt="a design on different physical supports"
-	/>
+    alt="a design on different physical supports"
+    />
+  </div>
 </Slide>
 
 <Slide>
@@ -101,9 +119,18 @@ import Slide from "../../components/Slide.astro";
   <h2>Une autre approche ?</h2>
 </Slide>
 
-<Slide data-background-image="images/intro/responsive-web-design-article.webp" data-background-size="contain"></Slide>
+<Slide
+  data-background-gradient="linear-gradient(white, white)"
+  data-background-image="images/intro/responsive-web-design-article.webp"
+  data-background-size="contain">
+</Slide>
 
-<Slide data-background-transition="none" data-background-image="images/intro/responsive-web-design-article-2.webp" data-background-size="contain"></Slide>
+<Slide
+  data-background-gradient="linear-gradient(white, white)"
+  data-background-transition="none"
+  data-background-image="images/intro/responsive-web-design-article-2.webp"
+  data-background-size="contain">
+</Slide>
 
 <Slide>
 	<h2>Un parallèle avec l'architecture 📐</h2>
@@ -114,7 +141,7 @@ import Slide from "../../components/Slide.astro";
 </Slide>
 
 <Slide>
-  <h2>La philosophie du design responsif 🌊</h2>
+  <h2>La philosophie du responsive design 🌊</h2>
   <div class="r-stack">
     <img
       class="fragment fade-out"
@@ -146,19 +173,34 @@ import Slide from "../../components/Slide.astro";
 </Slide>
 
 <Slide>
-	<h2>🫵 Et vous, vous vous mettez combien ?</h2>
+	<h2>🫵 et vous,<br/>vous vous mettez combien ?</h2>
 </Slide>
 
 <style>
+  .screen-specs {
+    display: flex;
+    flex-direction: column;
+
+    strong {
+      font-size: .8em;
+    }
+    span {
+      font-size: .7em;
+    }
+  }
+  .old-screen img {
+    height: 450px;
+  }
+
 	img {
-		max-height: 600px;
+		height: 550px;
+    margin: 0;
 
 		li > & {
 			max-height: 200px;
 		}
 
 		& + span {
-			display: block;
 			font-size: 0.8em;
 		}
 	}

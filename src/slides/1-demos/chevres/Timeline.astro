@@ -52,7 +52,6 @@ import Slide from "../../../components/Slide.astro";
 	}
 
 	.credits {
-		/* position: fixed; */
 		opacity: 0.9;
 		font-size: 1.25rem;
 	}
@@ -201,13 +200,15 @@ import Slide from "../../../components/Slide.astro";
 
 	.wrapper {
 		font-size: 1.25rem;
-		margin: 2rem auto 0;
+		margin: 2rem auto 4rem;
 		container: timeline/inline-size;
 		overflow: hidden;
 		resize: horizontal;
+    min-width: 350px;
 		background-color: white;
-		/* border: 1px solid currentColor; */
-		/* box-shadow: 0 0 20px -10px currentColor; */
+		border-radius: 8px;
+		border: 1px solid #eaeaea;
+		box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.06);
 		padding: 1rem;
 		border-radius: 8px;
 	}

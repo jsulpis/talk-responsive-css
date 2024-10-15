@@ -25,7 +25,7 @@ export function RadioButton({
 					<use href={`icons/devices-sprite.svg#${value}`}></use>
 				</svg>
 			</label>
-			{checked && <span>{width} x {height}</span>}
+			{checked && <span>{width} &times; {height}</span>}
 	</div>
 	);
 }

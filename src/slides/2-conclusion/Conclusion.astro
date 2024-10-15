@@ -16,75 +16,23 @@ import Slide from "../../components/Slide.astro";
   </div>
 </Slide>
 
-<Slide>
-  <div class="container">
-    <div class="profile-card first">
-      <img src="/images/portrait-julien.webp" alt="portrait" />
-      <span>Julien Sulpis</span>
-    </div>
-    <div class="profile-card second">
-      <img src="/images/portrait-theo.webp" alt="portrait" />
-      <span>Théo Gianella</span>
-    </div>
-    <span class="zenika" data-fragment-index="1"><span>Développeurs front-end</span> <img style="display: inline" src="/images/Logo%20Zenika%20Horizontal_Noir.svg" alt="Zenika logo" width="200" /><span>Lyon</span></span>
-    <img class="qr fragment" src="/images/url_bento.me.png" alt="qr code" />
-  </div>
-</Slide>
+<Slide
+  data-background-image="/images/outro.webp"
+  data-background-size="contain"
+/>
+
+<style is:global>
+  @media (min-aspect-ratio: 16/9) {
+    .backgrounds > .slide-background:last-child.present {
+      background-image: linear-gradient(transparent 22%, black 0px);
+    }
+  }
+</style>
 
 <style>
   img {
     max-width: 100%;
     max-height: 600px;
-  }
-
-  .profile-card {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-
-    max-width: clamp(120px, 20vw, 500px)
-  }
-
-  .container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas:
-      "first second  qr qr"
-      "zenika zenika qr qr";
-    gap: 1em;
-    place-items: center;
-    max-height: 10vh;
-  }
-
-  .first {
-    grid-area: first;
-  }
-
-  .second {
-    grid-area: second;
-  }
-
-  .zenika {
-    grid-area: zenika;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    place-items: center;
-    gap: 8px;
-
-    & *:first-child {
-      grid-column: 1 / -1;
-    }
-  }
-
-  .qr {
-    grid-area: qr;
-  }
-
-  span > img {
-    margin: 0;
   }
 
   div.r-stack {

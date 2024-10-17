@@ -22,17 +22,27 @@ const { title } = Astro.props;
   <body>
     <slot />
 
-    <div class="hidden" id="meme">
+    <div class="hidden" id="meme-batman">
       <img src="/images/breakpoints-meme.webp" alt="batman slapping robin" />
     </div>
 
+    <div class="hidden" id="meme-robin">
+      <img src="/images/robin-meme.webp" alt="robin slapping batman" />
+    </div>
+
     <script>
-      const memeImg = document.getElementById("meme")
+      const memeBatmanImg = document.getElementById("meme-batman")
+      const memeRobinImg = document.getElementById("meme-robin")
       document.addEventListener('keydown', (event) => {
         if (event.code === "AltLeft" && !(document.activeElement?.role === "textbox" || event.metaKey || event.ctrlKey)) {
-          memeImg.classList.toggle("hidden");
+          memeBatmanImg.classList.toggle("hidden");
+          memeRobinImg.classList.add("hidden");
+        } else if (event.code === "AltRight" && !(document.activeElement?.role === "textbox" || event.metaKey || event.ctrlKey)) {
+          memeRobinImg.classList.toggle("hidden");
+          memeBatmanImg.classList.add("hidden");
         } else {
-          memeImg.classList.add("hidden")
+          memeBatmanImg.classList.add("hidden");
+          memeRobinImg.classList.add("hidden");
         }
       })
     </script>
@@ -64,7 +74,7 @@ const { title } = Astro.props;
     --r-heading-text-transform: normal;
   }
 
-  #meme {
+  #meme-batman, #meme-robin {
     position: fixed;
     z-index: 100;
     backdrop-filter: blur(10px);

@@ -1,9 +1,10 @@
 ---
 import Slide from "../../components/Slide.astro";
+import { currentEvent } from "../../events";
 ---
 
 <Slide
-  data-background-image="/images/intro-mixit.webp"
+  data-background-image={currentEvent.introImg}
   data-background-size="contain"
 />
 

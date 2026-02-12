@@ -1,27 +1,18 @@
-# Reveal.js + Astro
+# Tu te mets combien en responsive css ?
 
-Minimalist template for presentations on the web.
+Une conférence qui fait le tour d’horizon des mille et une manières d’implémenter un design web responsive en CSS, des techniques les plus basiques aux plus modernes !
 
-## Usage
+## 📣 Le talk 
+* [Slides](http://talk-responsive-css.vercel.app)
+* [Feedback](https://app.voxxr.in/events/snowcamp26/rate-talk/52)
 
-You have several options to start a new presentation using this template:
+## 🫡 Les speakers
+* [Julien Sulpis](https://github.com/jsulpis)
+* [Théo Gianella](https://github.com/tgianella)
 
-- Click on the button 'Use this template' above, or
-- Clone the repo : `git clone git@github.com:jsulpis/slides-template.git`, or
-- Use [degit](https://www.npmjs.com/package/degit) (get a copy without cloning): `pnpm dlx degit jsulpis/slides-template my-talk`
-
-## UI Framework
-
-For the specific cases where you need one, you can add one of the [frameworks](https://docs.astro.build/en/guides/integrations-guide/) supported by Astro.
-
-For instance:
-
-```
-pnpm astro add svelte
-```
-
-or
-
-```bash
-pnpm astro add react tailwind
-```
+## 📚 Quelques ressources supplémentaires
+* [Ethan Marcotte - Responsive web design](https://alistapart.com/article/responsive-web-design/)
+* [Ahmad Shadeed - Container queries](https://lab.ishadeed.com/container-queries/)
+* [Meyerweb - What is the CSS ‘ch’ Unit?](https://meyerweb.com/eric/thoughts/2018/06/28/what-is-the-css-ch-unit/)
+* [Josh Comeau - A Friendly Introduction to Container Queries](https://www.joshwcomeau.com/css/container-queries-introduction/)
+* [Josh Comeau - Container Queries Unleashed](https://www.joshwcomeau.com/css/container-queries-unleashed/)

@@ -2,9 +2,9 @@
 
 Une conférence qui fait le tour d’horizon des mille et une manières d’implémenter un design web responsive en CSS, des techniques les plus basiques aux plus modernes !
 
-## 📣 Le talk 
+## 📣 Le talk
 * [Slides](http://talk-responsive-css.vercel.app)
-* [Feedback](https://app.voxxr.in/events/snowcamp26/rate-talk/52)
+* [Feedback](https://m.devoxx.com/events/devoxxfr2026/talks/77095/tu-te-mets-combien-en-responsive-css-edition-2026)
 
 ## 🫡 Les speakers
 * [Julien Sulpis](https://github.com/jsulpis)

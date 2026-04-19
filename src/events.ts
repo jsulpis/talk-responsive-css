@@ -1,8 +1,4 @@
 const events = {
-  devoxx: {
-    introImg: "/images/intro-devoxx.webp",
-    outroImg: "/images/outro-devoxx.webp",
-  },
   mixit: {
     introImg: "/images/intro-mixit.webp",
     outroImg: "/images/outro-mixit.webp",
@@ -15,6 +11,10 @@ const events = {
     introImg: "/images/intro/snowcamp.webp",
     outroImg: "/images/outro-snowcamp.webp",
   },
+  devoxx: {
+    introImg: "/images/intro-devoxx.webp",
+    outroImg: "/images/outro-devoxx.webp",
+  },
 };
 
-export const currentEvent = events.snowcamp;
+export const currentEvent = Object.values(events).at(-1);
